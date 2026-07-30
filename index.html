@@ -342,6 +342,8 @@ const pages = [...document.querySelectorAll('[data-case-page]')];
 const pageButtons = [...document.querySelectorAll('[data-page]')];
 const track = document.querySelector('.casebook-track');
 
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
 function loadFrame(frame) {
   const source = frame.dataset.src;
   if (!source) return Promise.resolve();
@@ -437,11 +439,14 @@ if (document.readyState === 'loading') {
   createIcons();
 }
 
-setActivePage(1);
-window.addEventListener('pageshow', () => {
-  requestAnimationFrame(loadVisiblePage);
-  window.setTimeout(loadVisiblePage, 300);
-});
+function resetCasebookPosition() {
+  track.scrollTo({ left: 0, behavior: 'auto' });
+  visiblePage = pages[0];
+  setActivePage(1);
+}
+
+resetCasebookPosition();
+window.addEventListener('pageshow', resetCasebookPosition);
 
 </script>
 </body>
