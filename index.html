@@ -340,6 +340,7 @@ svg { width: 20px; height: 20px; }
   <script>
 const pages = [...document.querySelectorAll('[data-case-page]')];
 const pageButtons = [...document.querySelectorAll('[data-page]')];
+const track = document.querySelector('.casebook-track');
 
 function loadFrame(frame) {
   const source = frame.dataset.src;
@@ -389,14 +390,24 @@ document.querySelector('[data-print]').addEventListener('click', async () => {
 
 window.addEventListener('beforeprint', loadAllFrames);
 
-const observer = new IntersectionObserver((entries) => {
-  const visible = entries
-    .filter((entry) => entry.isIntersecting && entry.intersectionRatio >= 0.45)
-    .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-  if (visible) setActivePage(visible.target.dataset.casePage);
-}, { root: document.querySelector('.casebook-track'), threshold: [0.45, 0.7] });
+let scrollFrame = 0;
 
-pages.forEach((page) => observer.observe(page));
+function syncActivePageFromScroll() {
+  scrollFrame = 0;
+  const trackRect = track.getBoundingClientRect();
+  const trackCenter = trackRect.left + trackRect.width / 2;
+  const activePage = pages.reduce((closest, page) => {
+    const pageRect = page.getBoundingClientRect();
+    const distance = Math.abs(pageRect.left + pageRect.width / 2 - trackCenter);
+    return !closest || distance < closest.distance ? { page, distance } : closest;
+  }, null)?.page;
+
+  if (activePage) setActivePage(activePage.dataset.casePage);
+}
+
+track.addEventListener('scroll', () => {
+  if (!scrollFrame) scrollFrame = requestAnimationFrame(syncActivePageFromScroll);
+}, { passive: true });
 
 document.addEventListener('keydown', (event) => {
   if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
