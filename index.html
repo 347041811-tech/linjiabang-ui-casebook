@@ -393,6 +393,8 @@ document.querySelector('[data-print]').addEventListener('click', async () => {
 window.addEventListener('beforeprint', loadAllFrames);
 
 let scrollFrame = 0;
+let scrollLoadTimer = 0;
+let visiblePage = pages[0];
 
 function syncActivePageFromScroll() {
   scrollFrame = 0;
@@ -402,11 +404,19 @@ function syncActivePageFromScroll() {
     return !closest || distance < closest.distance ? { page, distance } : closest;
   }, null)?.page;
 
-  if (activePage) setActivePage(activePage.dataset.casePage, { loadAssets: false });
+  if (activePage) {
+    visiblePage = activePage;
+    setActivePage(activePage.dataset.casePage, { loadAssets: false });
+  }
 }
 
 track.addEventListener('scroll', () => {
   if (!scrollFrame) scrollFrame = requestAnimationFrame(syncActivePageFromScroll);
+  window.clearTimeout(scrollLoadTimer);
+  scrollLoadTimer = window.setTimeout(() => {
+    syncActivePageFromScroll();
+    loadPageAssets(visiblePage.dataset.casePage);
+  }, 160);
 }, { passive: true });
 
 document.addEventListener('keydown', (event) => {
