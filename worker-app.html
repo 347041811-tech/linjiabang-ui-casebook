@@ -1,0 +1,2741 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>邻家帮｜师傅端</title>
+  <style>
+:root{--b:#1269e8;--n:#10273b;--i:#122235;--m:#71808f;--l:#e1e8ee;--s:#f4f7f9;--g:#16a36a}*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans SC",sans-serif;color:var(--i);background:#e9eef2}button,input,select{font:inherit}button{cursor:pointer}svg{width:20px;height:20px}.back{position:fixed;left:20px;top:18px;z-index:30;display:flex;gap:7px;align-items:center;background:#fff;padding:10px 14px;color:#536576;text-decoration:none;font-size:12px;box-shadow:0 5px 20px #1020301a;border-radius:4px}.back svg{width:15px}.phone-page{min-height:100vh;display:grid;place-items:center;padding:25px}.device{width:390px;height:844px;background:#f6f8fa;border:9px solid #172331;border-radius:38px;box-shadow:0 30px 80px #10233440;position:relative;overflow:hidden}.scroll{height:calc(100% - 68px);overflow:auto;scrollbar-width:none}.scroll::-webkit-scrollbar{display:none}.app-head{padding:34px 20px 18px;background:#fff}.top,.title,.job-top,.job-foot{display:flex;align-items:center;justify-content:space-between}.top strong{font-size:18px}.place{font-size:10px;color:#718391;display:flex;gap:3px;align-items:center;margin-top:4px}.place svg{width:12px}.actions{display:flex;gap:14px}.actions svg{width:18px}.hero-card{height:126px;margin-top:18px;padding:20px;color:#fff;background:linear-gradient(120deg,#145bbf,#168be4);border-radius:6px;position:relative;overflow:hidden}.hero-card:after{content:"";position:absolute;right:-50px;top:-60px;width:160px;height:160px;border:28px solid #ffffff14;border-radius:50%}.hero-card small{font-size:9px;opacity:.8}.hero-card h1{font-size:22px;line-height:1.3;margin:7px 0 13px}.hero-card button{border:0;background:#fff;color:var(--b);padding:7px 12px;font-size:9px;font-weight:bold}.section{background:#fff;padding:18px 20px;margin-top:9px}.title{margin-bottom:15px}.title strong{font-size:14px}.title button{border:0;background:none;color:#7a8b99;font-size:9px}.services{display:grid;grid-template-columns:repeat(4,1fr);gap:17px 7px}.service{text-align:center;font-size:9px}.service i{display:grid;place-items:center;width:47px;height:47px;margin:0 auto 7px;background:#e8f3ff;color:var(--b);border-radius:5px}.service:nth-child(2n) i{background:#eaf8f3;color:#17966b}.service:nth-child(3n) i{background:#fff2e7;color:#e77b25}.coupon{background:#eef5ff;border-left:3px solid var(--b);padding:12px;display:flex;align-items:center}.coupon b{font-size:17px;color:var(--b);margin-right:11px}.coupon span{font-size:9px;color:#657686;flex:1}.coupon button{background:#fff;border:1px solid var(--b);color:var(--b);padding:5px 8px;font-size:8px}.master{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--l)}.avatar{width:42px;height:42px;border-radius:50%;background:#dce6ed;display:grid;place-items:center;font-weight:bold}.master div{flex:1}.master b{display:block;font-size:11px}.master small{font-size:8px;color:#7b8c99}.master em{font-size:8px;color:var(--b);font-style:normal}.nav{position:absolute;bottom:0;left:0;right:0;height:68px;background:#fff;border-top:1px solid var(--l);display:grid;grid-template-columns:repeat(4,1fr);z-index:6}.nav button{border:0;background:none;color:#91a0ad;font-size:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}.nav button.active{color:var(--b)}.nav svg{width:19px}.view{display:none}.view.active{display:block}.worker .app-head{background:var(--n);color:#fff}.status{display:flex;justify-content:space-between;align-items:center;margin-top:22px}.status>div{display:flex;align-items:center;gap:9px}.dot{width:8px;height:8px;background:#38d68e;border-radius:50%;box-shadow:0 0 0 4px #38d68e22}.switch{width:44px;height:24px;border:0;border-radius:12px;background:#29956e;padding:3px}.switch:after{content:"";display:block;width:18px;height:18px;border-radius:50%;background:#fff;margin-left:20px;transition:.2s}.switch.off{background:#71808d}.switch.off:after{margin-left:0}.earning{display:grid;grid-template-columns:1fr 1fr;background:#ffffff12;padding:16px;margin-top:18px}.earning div+div{border-left:1px solid #ffffff20;padding-left:18px}.earning span{font-size:8px;color:#a9bbc9}.earning strong{display:block;font-size:20px;margin-top:7px}.filters{display:flex;gap:7px;overflow:auto;margin-bottom:14px}.filters button{border:0;background:#edf2f5;color:#718290;padding:7px 11px;font-size:9px;white-space:nowrap}.filters button.active{background:var(--b);color:#fff}.job{border:1px solid var(--l);padding:14px;margin-bottom:10px;border-radius:4px}.job-top b{font-size:12px}.job-top span{font-size:9px;color:#ef8129}.job p{font-size:9px;color:#748594;display:flex;gap:5px}.job p svg{width:12px}.job-foot{border-top:1px dashed var(--l);padding-top:10px}.job-foot strong{color:var(--b);font-size:16px}.job-foot button{border:0;background:var(--b);color:#fff;padding:8px 13px;font-size:9px}.job-foot button.done{background:var(--g)}.toast{position:absolute;bottom:85px;left:50%;transform:translate(-50%,15px);background:var(--n);color:#fff;padding:10px 16px;font-size:10px;opacity:0;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}
+.admin{background:#eef2f5}.shell{display:grid;grid-template-columns:225px 1fr;min-height:100vh}.side{background:var(--n);color:#fff;padding:24px 15px;position:relative}.brand{font-weight:bold;display:flex;align-items:center;gap:10px;padding:0 8px 24px}.brand i{width:33px;height:33px;background:var(--b);display:grid;place-items:center}.menu{display:grid;gap:5px}.menu button{border:0;background:none;color:#90a5b7;display:flex;gap:11px;padding:12px;align-items:center;text-align:left;font-size:12px}.menu button.active,.menu button:hover{background:#1a3b58;color:#fff}.menu svg{width:17px}.main{min-width:0}.topbar{height:70px;background:#fff;border-bottom:1px solid var(--l);display:flex;align-items:center;justify-content:space-between;padding:0 28px}.topbar h1{font-size:18px}.content{padding:25px 28px}.admin-view{display:none}.admin-view.active{display:block}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.metric,.panel{background:#fff;border:1px solid var(--l);padding:20px}.metric span{font-size:10px;color:var(--m)}.metric strong{display:block;font-size:25px;margin:10px 0}.metric small{color:var(--g);font-size:9px}.charts{display:grid;grid-template-columns:1.6fr 1fr;gap:13px;margin-top:13px}.bars{height:245px;display:flex;align-items:end;gap:20px;border-bottom:1px solid var(--l);padding:28px 10px 18px}.bars span{flex:1;background:linear-gradient(#4fa5ff,var(--b))}.rank div{font-size:10px;margin-top:25px}.rank b{float:right}.rank i{height:5px;background:#e9eef2;display:block;margin-top:7px}.rank i:after{content:"";display:block;height:100%;width:var(--w);background:var(--b)}.toolbar{display:flex;justify-content:space-between;margin-bottom:13px}.toolbar div{display:flex;gap:7px}.toolbar button{border:1px solid var(--l);background:#fff;padding:9px 12px;font-size:10px}.toolbar .active,.toolbar .primary{background:var(--b);color:#fff;border-color:var(--b)}.table-wrap{overflow:auto}.data{width:100%;min-width:780px;border-collapse:collapse;background:#fff;font-size:10px}.data th,.data td{padding:14px;border-bottom:1px solid var(--l);text-align:left}.data th{background:#f7f9fa;color:#748594}.tag{padding:4px 7px;background:#fff1e6;color:#db721a}.tag.green{background:#e9f8f2;color:#158b60}.assign{border:0;background:none;color:var(--b)}.drawer{position:fixed;right:-370px;top:0;width:370px;height:100vh;background:#fff;padding:28px;box-shadow:-10px 0 40px #1020302b;transition:.25s;z-index:20}.drawer.open{right:0}.drawer-close{float:right;border:0;background:none}.drawer h2{margin:35px 0 25px}.drawer label{display:block;font-size:10px;margin:16px 0}.drawer select{width:100%;padding:11px;border:1px solid var(--l);margin-top:7px}.confirm{width:100%;border:0;background:var(--b);color:#fff;padding:12px;margin-top:18px}
+@media(max-width:800px){.phone-page{padding:0;background:#fff}.device{width:100%;height:100vh;border:0;border-radius:0}.back{display:none}.app-head{padding-top:22px}.shell{grid-template-columns:62px 1fr}.side{padding:18px 7px}.brand span,.menu span{display:none}.menu button{justify-content:center}.content{padding:16px 12px}.metrics{grid-template-columns:repeat(2,1fr)}.charts{grid-template-columns:1fr}.topbar{padding:0 14px}.drawer{width:min(370px,100%)}}
+
+</style>
+  <style>
+:root {
+  --worker-blue: #176fd8;
+  --worker-ink: #183247;
+  --worker-muted: #758793;
+  --worker-line: #e4ebef;
+  --worker-bg: #f3f6f8;
+  --worker-green: #168b64;
+  --worker-orange: #e78335;
+}
+
+.worker-app button {
+  border: 0;
+}
+
+.worker-app .device {
+  background: var(--worker-bg);
+}
+
+.worker-root,
+.worker-detail {
+  min-height: 100%;
+  background: var(--worker-bg);
+  color: var(--worker-ink);
+}
+
+.worker-root {
+  padding-bottom: 16px;
+}
+
+.worker-home-head {
+  padding: 29px 17px 17px;
+  background: linear-gradient(145deg, #122f48, #17547d);
+  color: #fff;
+}
+
+.worker-topbar,
+.worker-page-head,
+.worker-section-title,
+.worker-job-head,
+.worker-job-foot,
+.service-order-head,
+.service-order-title,
+.detail-panel-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.worker-identity {
+  min-width: 0;
+  padding: 0;
+  background: transparent;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  text-align: left;
+}
+
+.worker-avatar {
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: 50%;
+  background: #d8e7f0;
+  color: #274b62;
+  display: grid;
+  place-items: center;
+  flex: 0 0 38px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.worker-identity > span:nth-child(2) {
+  min-width: 0;
+}
+
+.worker-identity small,
+.worker-identity strong {
+  display: block;
+}
+
+.worker-identity small {
+  color: #a9c1d1;
+  font-size: 8px;
+}
+
+.worker-identity strong {
+  margin-top: 3px;
+  font-size: 15px;
+}
+
+.worker-identity > svg {
+  width: 15px;
+  height: 15px;
+  color: #65d7a7;
+}
+
+.worker-head-actions,
+.worker-profile-tools {
+  display: flex;
+  gap: 8px;
+}
+
+.worker-head-actions button,
+.worker-profile-tools button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .1);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.worker-head-actions svg,
+.worker-profile-tools svg {
+  width: 17px;
+  height: 17px;
+}
+
+.worker-head-actions b,
+.worker-profile-tools b {
+  position: absolute;
+  right: -2px;
+  top: -3px;
+  min-width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  background: #ed654c;
+  color: #fff;
+  font-size: 7px;
+  display: grid;
+  place-items: center;
+}
+
+.work-status-card {
+  min-height: 65px;
+  margin-top: 18px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, .13);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.work-status-copy {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.online-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #43d89a;
+  box-shadow: 0 0 0 5px rgba(67, 216, 154, .14);
+}
+
+.work-status-copy strong,
+.work-status-copy small {
+  display: block;
+}
+
+.work-status-copy strong {
+  font-size: 12px;
+}
+
+.work-status-copy small {
+  margin-top: 5px;
+  color: #b8ccd9;
+  font-size: 8px;
+}
+
+.work-switch,
+.mini-switch {
+  padding: 3px;
+  border-radius: 15px;
+  background: #24a676;
+  flex: 0 0 auto;
+}
+
+.work-switch {
+  width: 46px;
+  height: 26px;
+}
+
+.work-switch span,
+.mini-switch span {
+  display: block;
+  border-radius: 50%;
+  background: #fff;
+  transition: margin .2s;
+}
+
+.work-switch span {
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+}
+
+.work-switch.off {
+  background: #758795;
+}
+
+.work-switch.off span {
+  margin-left: 0;
+}
+
+.worker-stats {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.worker-stats button {
+  padding: 3px 8px;
+  border-left: 1px solid rgba(255, 255, 255, .12);
+  background: transparent;
+  color: #fff;
+  text-align: center;
+}
+
+.worker-stats button:first-child {
+  border-left: 0;
+}
+
+.worker-stats strong,
+.worker-stats span {
+  display: block;
+}
+
+.worker-stats strong {
+  font-size: 17px;
+}
+
+.worker-stats strong small {
+  margin-left: 2px;
+  font-size: 8px;
+}
+
+.worker-stats span {
+  margin-top: 6px;
+  color: #adc3d1;
+  font-size: 8px;
+}
+
+.worker-main,
+.wallet-main {
+  padding: 11px 12px 18px;
+}
+
+.dispatch-mode {
+  padding: 14px;
+  border-radius: 8px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dispatch-mode strong,
+.dispatch-mode small {
+  display: block;
+}
+
+.dispatch-mode strong {
+  font-size: 11px;
+}
+
+.dispatch-mode small {
+  margin-top: 5px;
+  color: var(--worker-muted);
+  font-size: 8px;
+}
+
+.mode-segment {
+  padding: 3px;
+  border-radius: 6px;
+  background: #edf2f5;
+  display: flex;
+}
+
+.mode-segment button {
+  height: 28px;
+  padding: 0 9px;
+  border-radius: 4px;
+  background: transparent;
+  color: #738691;
+  font-size: 8px;
+}
+
+.mode-segment button.active {
+  background: #fff;
+  color: var(--worker-blue);
+  font-weight: 700;
+  box-shadow: 0 2px 7px rgba(24, 50, 71, .08);
+}
+
+.assigned-order {
+  width: 100%;
+  min-height: 72px;
+  margin-top: 10px;
+  padding: 13px;
+  border: 1px solid #cfe2f4;
+  border-radius: 8px;
+  background: #edf6ff;
+  color: var(--worker-ink);
+  display: grid;
+  grid-template-columns: 38px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  text-align: left;
+}
+
+.assigned-order > span {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--worker-blue);
+  display: grid;
+  place-items: center;
+}
+
+.assigned-order > span svg {
+  width: 18px;
+  height: 18px;
+}
+
+.assigned-order div {
+  min-width: 0;
+}
+
+.assigned-order small,
+.assigned-order strong {
+  display: block;
+}
+
+.assigned-order small {
+  color: #648097;
+  font-size: 7px;
+}
+
+.assigned-order strong {
+  margin-top: 6px;
+  font-size: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.assigned-order em {
+  padding: 5px 7px;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--worker-orange);
+  font-size: 7px;
+  font-style: normal;
+}
+
+.worker-section {
+  margin-top: 10px;
+  padding: 16px 14px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.worker-section-title {
+  margin-bottom: 14px;
+}
+
+.worker-section-title strong,
+.worker-section-title small {
+  display: block;
+}
+
+.worker-section-title strong {
+  font-size: 13px;
+}
+
+.worker-section-title small {
+  margin-top: 5px;
+  color: #8b9aa3;
+  font-size: 8px;
+}
+
+.worker-section-title > button {
+  padding: 5px;
+  background: transparent;
+  color: #758894;
+  font-size: 8px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.worker-section-title > button svg {
+  width: 14px;
+  height: 14px;
+}
+
+.worker-filters,
+.worker-order-tabs {
+  display: flex;
+  gap: 7px;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.worker-filters {
+  margin-bottom: 13px;
+}
+
+.worker-filters button,
+.worker-order-tabs button {
+  height: 29px;
+  padding: 0 11px;
+  border-radius: 15px;
+  background: #f0f4f6;
+  color: #71838f;
+  font-size: 8px;
+  white-space: nowrap;
+}
+
+.worker-filters button.active,
+.worker-order-tabs button.active {
+  background: #183d59;
+  color: #fff;
+}
+
+.worker-job-card {
+  margin-top: 10px;
+  padding: 13px;
+  border: 1px solid var(--worker-line);
+  border-radius: 8px;
+}
+
+.worker-job-head {
+  gap: 9px;
+}
+
+.job-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 38px;
+}
+
+.job-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.job-icon.blue,
+.notice-icon.blue {
+  background: #e8f2ff;
+  color: #176fd8;
+}
+
+.job-icon.mint,
+.notice-icon.mint {
+  background: #e7f7f0;
+  color: #168b64;
+}
+
+.job-icon.orange,
+.notice-icon.orange {
+  background: #fff0e3;
+  color: #e27b2f;
+}
+
+.job-icon.violet {
+  background: #f0edff;
+  color: #715bd0;
+}
+
+.job-icon.slate {
+  background: #eef2f4;
+  color: #607481;
+}
+
+.worker-job-head > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.worker-job-head strong,
+.worker-job-head small {
+  display: block;
+}
+
+.worker-job-head strong {
+  font-size: 11px;
+}
+
+.worker-job-head small {
+  margin-top: 5px;
+  color: #8b9aa3;
+  font-size: 7px;
+}
+
+.worker-job-head em {
+  color: var(--worker-orange);
+  font-size: 8px;
+  font-style: normal;
+}
+
+.worker-job-info {
+  margin-top: 12px;
+  padding: 9px 10px;
+  border-radius: 6px;
+  background: #f7f9fa;
+}
+
+.worker-job-info p {
+  margin: 0;
+  color: #657985;
+  font-size: 8px;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.worker-job-info p + p {
+  margin-top: 4px;
+}
+
+.worker-job-info svg {
+  width: 12px;
+  height: 12px;
+  color: #8ea0aa;
+}
+
+.worker-job-tags,
+.review-tags {
+  margin-top: 10px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.worker-job-tags span,
+.review-tags span {
+  padding: 4px 6px;
+  border-radius: 9px;
+  background: #edf6ff;
+  color: #3e75a4;
+  font-size: 7px;
+}
+
+.worker-job-tags .warm {
+  background: #fff2e7;
+  color: #d57932;
+}
+
+.worker-job-foot {
+  gap: 7px;
+  margin-top: 11px;
+  padding-top: 11px;
+  border-top: 1px dashed var(--worker-line);
+}
+
+.worker-job-foot > div {
+  margin-right: auto;
+}
+
+.worker-job-foot small,
+.worker-job-foot strong {
+  display: block;
+}
+
+.worker-job-foot small {
+  color: #8c9aa3;
+  font-size: 7px;
+}
+
+.worker-job-foot strong {
+  margin-top: 3px;
+  color: var(--worker-blue);
+  font-size: 16px;
+}
+
+.worker-job-foot button,
+.service-order-actions button {
+  min-width: 61px;
+  height: 30px;
+  padding: 0 9px;
+  border-radius: 4px;
+  font-size: 8px;
+}
+
+.worker-job-foot .ghost,
+.service-order-actions button {
+  border: 1px solid #dce5ea;
+  background: #fff;
+  color: #5d7280;
+}
+
+.worker-job-foot .accept,
+.service-order-actions .primary {
+  border-color: var(--worker-blue);
+  background: var(--worker-blue);
+  color: #fff;
+}
+
+.worker-job-foot .accept.done {
+  background: var(--worker-green);
+}
+
+.worker-page-head {
+  height: 84px;
+  padding: 27px 17px 14px;
+  border-bottom: 1px solid var(--worker-line);
+  background: #fff;
+}
+
+.worker-page-head strong,
+.worker-page-head small {
+  display: block;
+}
+
+.worker-page-head strong {
+  font-size: 17px;
+}
+
+.worker-page-head small {
+  margin-top: 5px;
+  color: #85959f;
+  font-size: 8px;
+}
+
+.worker-page-head > button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #f1f5f7;
+  color: #577080;
+  display: grid;
+  place-items: center;
+}
+
+.worker-page-head > button svg {
+  width: 17px;
+}
+
+.order-summary-strip,
+.wallet-assets {
+  padding: 15px 7px;
+  border-radius: 8px;
+  background: #fff;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.order-summary-strip > div {
+  border-left: 1px solid var(--worker-line);
+  text-align: center;
+}
+
+.order-summary-strip > div:first-child {
+  border-left: 0;
+}
+
+.order-summary-strip strong,
+.order-summary-strip small {
+  display: block;
+}
+
+.order-summary-strip strong {
+  font-size: 14px;
+}
+
+.order-summary-strip small {
+  margin-top: 6px;
+  color: #83949e;
+  font-size: 7px;
+}
+
+.worker-order-tabs {
+  margin: 11px 0;
+}
+
+.worker-order-list {
+  display: grid;
+  gap: 10px;
+}
+
+.service-order-card {
+  padding: 14px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.active-order {
+  border: 1px solid #cfe2f4;
+}
+
+.completed-order {
+  opacity: .93;
+}
+
+.service-order-head span {
+  color: #8b99a2;
+  font-size: 7px;
+}
+
+.service-order-head em {
+  padding: 5px 7px;
+  border-radius: 10px;
+  font-size: 7px;
+  font-style: normal;
+}
+
+.service-order-head .serving {
+  background: #eaf4ff;
+  color: var(--worker-blue);
+}
+
+.service-order-head .waiting {
+  background: #fff2e7;
+  color: var(--worker-orange);
+}
+
+.service-order-head .completed {
+  background: #e8f7f0;
+  color: var(--worker-green);
+}
+
+.service-order-title {
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.service-order-title > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.service-order-title strong,
+.service-order-title small {
+  display: block;
+}
+
+.service-order-title strong {
+  font-size: 11px;
+}
+
+.service-order-title small {
+  margin-top: 5px;
+  color: #7e909b;
+  font-size: 8px;
+}
+
+.service-order-title > b {
+  color: var(--worker-blue);
+  font-size: 15px;
+}
+
+.service-order-address {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 6px;
+  background: #f6f9fa;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.service-order-address > svg {
+  width: 15px;
+  color: #81949f;
+}
+
+.service-order-address > span {
+  min-width: 0;
+  flex: 1;
+  font-size: 8px;
+}
+
+.service-order-address small {
+  display: block;
+  margin-top: 5px;
+  color: #8a99a2;
+}
+
+.service-order-address button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #e8f2ff;
+  color: var(--worker-blue);
+  display: grid;
+  place-items: center;
+}
+
+.service-order-address button svg {
+  width: 14px;
+}
+
+.service-progress {
+  margin: 15px 5px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+}
+
+.service-progress::before {
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  top: 4px;
+  height: 1px;
+  background: #dbe4e9;
+}
+
+.service-progress span {
+  color: #919fa7;
+  font-size: 7px;
+  text-align: center;
+  position: relative;
+}
+
+.service-progress span::before {
+  content: "";
+  display: block;
+  width: 9px;
+  height: 9px;
+  margin: 0 auto 6px;
+  border-radius: 50%;
+  background: #d6e0e6;
+  position: relative;
+  z-index: 1;
+}
+
+.service-progress .done::before,
+.service-progress .active::before {
+  background: var(--worker-blue);
+}
+
+.service-progress .active {
+  color: var(--worker-blue);
+  font-weight: 700;
+}
+
+.service-order-actions {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--worker-line);
+  display: flex;
+  justify-content: flex-end;
+  gap: 7px;
+}
+
+.wallet-main {
+  background: var(--worker-bg);
+}
+
+.wallet-balance {
+  min-height: 142px;
+  padding: 20px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #163c59, #176fa2);
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.wallet-balance small,
+.wallet-balance strong,
+.wallet-balance span {
+  display: block;
+}
+
+.wallet-balance small {
+  color: #b9cfdd;
+  font-size: 8px;
+}
+
+.wallet-balance strong {
+  margin: 10px 0;
+  font-size: 29px;
+}
+
+.wallet-balance span {
+  color: #b8d3df;
+  font-size: 7px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.wallet-balance span svg {
+  width: 12px;
+  height: 12px;
+  color: #68d7a9;
+}
+
+.wallet-balance > button {
+  height: 32px;
+  padding: 0 13px;
+  border-radius: 4px;
+  background: #fff;
+  color: #176c9f;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.wallet-assets {
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 10px;
+}
+
+.wallet-assets button {
+  border-left: 1px solid var(--worker-line);
+  background: transparent;
+  color: var(--worker-ink);
+}
+
+.wallet-assets button:first-child {
+  border-left: 0;
+}
+
+.wallet-assets strong,
+.wallet-assets span {
+  display: block;
+}
+
+.wallet-assets strong {
+  font-size: 12px;
+}
+
+.wallet-assets span {
+  margin-top: 6px;
+  color: #82929c;
+  font-size: 7px;
+}
+
+.income-chart {
+  padding-bottom: 23px;
+}
+
+.income-bars {
+  height: 116px;
+  padding-top: 8px;
+  border-bottom: 1px solid #e3e9ed;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.income-bars span {
+  height: var(--h);
+  flex: 1;
+  border-radius: 3px 3px 0 0;
+  background: #cfe1ee;
+  position: relative;
+}
+
+.income-bars span.today {
+  background: var(--worker-blue);
+}
+
+.income-bars i {
+  position: absolute;
+  left: 50%;
+  bottom: -18px;
+  color: #8797a0;
+  font-size: 7px;
+  font-style: normal;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+.wallet-list {
+  padding-bottom: 7px;
+}
+
+.wallet-item,
+.record-item {
+  min-height: 65px;
+  border-top: 1px solid var(--worker-line);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wallet-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 34px;
+}
+
+.wallet-icon svg {
+  width: 16px;
+}
+
+.wallet-icon.income {
+  background: #e6f7f0;
+  color: var(--worker-green);
+}
+
+.wallet-icon.payout {
+  background: #eef3f6;
+  color: #607887;
+}
+
+.wallet-item > div,
+.record-item > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.wallet-item strong,
+.wallet-item small,
+.record-item strong,
+.record-item small {
+  display: block;
+}
+
+.wallet-item strong,
+.record-item strong {
+  font-size: 9px;
+}
+
+.wallet-item small,
+.record-item small {
+  margin-top: 5px;
+  color: #87969f;
+  font-size: 7px;
+}
+
+.wallet-item > em {
+  color: var(--worker-green);
+  font-size: 10px;
+  font-style: normal;
+}
+
+.wallet-item > em.minus {
+  color: #5e7180;
+}
+
+.worker-profile-head {
+  min-height: 220px;
+  padding: 27px 17px 18px;
+  background: linear-gradient(145deg, #15354e, #245d7d);
+  color: #fff;
+}
+
+.worker-profile-tools {
+  justify-content: flex-end;
+}
+
+.worker-profile-card {
+  width: 100%;
+  margin-top: 17px;
+  padding: 0;
+  background: transparent;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-align: left;
+}
+
+.worker-avatar.large {
+  width: 54px;
+  height: 54px;
+  flex-basis: 54px;
+  font-size: 16px;
+}
+
+.worker-profile-card > span:nth-child(2) {
+  min-width: 0;
+  flex: 1;
+}
+
+.worker-profile-card strong,
+.worker-profile-card small {
+  display: block;
+}
+
+.worker-profile-card strong {
+  font-size: 15px;
+}
+
+.worker-profile-card strong em {
+  margin-left: 5px;
+  color: #65d7a7;
+  font-size: 8px;
+  font-style: normal;
+}
+
+.worker-profile-card strong em svg {
+  width: 12px;
+  height: 12px;
+  vertical-align: -2px;
+}
+
+.worker-profile-card small {
+  margin-top: 7px;
+  color: #b8ccd8;
+  font-size: 8px;
+}
+
+.worker-profile-card > svg {
+  width: 16px;
+  color: #a7bfcd;
+}
+
+.profile-metrics {
+  margin-top: 23px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.profile-metrics button {
+  border-left: 1px solid rgba(255, 255, 255, .14);
+  background: transparent;
+  color: #fff;
+}
+
+.profile-metrics button:first-child {
+  border-left: 0;
+}
+
+.profile-metrics strong,
+.profile-metrics small {
+  display: block;
+}
+
+.profile-metrics strong {
+  font-size: 14px;
+}
+
+.profile-metrics small {
+  margin-top: 6px;
+  color: #acc3d0;
+  font-size: 7px;
+}
+
+.profile-main {
+  margin-top: -1px;
+}
+
+.growth-card {
+  min-height: 94px;
+  padding: 16px;
+  border-radius: 8px;
+  background: #fff5e8;
+  color: #6d4f32;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.growth-card > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.growth-card small,
+.growth-card strong,
+.growth-card em {
+  display: block;
+}
+
+.growth-card small {
+  color: #9a7b5d;
+  font-size: 7px;
+}
+
+.growth-card strong {
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+.growth-card div > span {
+  width: 150px;
+  height: 4px;
+  margin-top: 9px;
+  border-radius: 2px;
+  background: #eadbc7;
+  display: block;
+  overflow: hidden;
+}
+
+.growth-card div > span i {
+  height: 100%;
+  border-radius: 2px;
+  background: #e5a04d;
+  display: block;
+}
+
+.growth-card em {
+  margin-top: 6px;
+  color: #9a7b5d;
+  font-size: 7px;
+  font-style: normal;
+}
+
+.growth-card > svg {
+  width: 37px;
+  height: 37px;
+  color: #d7923e;
+}
+
+.profile-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.profile-tools-grid button {
+  min-width: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--worker-ink);
+  display: grid;
+  justify-items: center;
+}
+
+.profile-tools-grid button > span {
+  width: 43px;
+  height: 43px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+}
+
+.profile-tools-grid button > span svg {
+  width: 19px;
+  height: 19px;
+}
+
+.tool-blue { background: #e8f2ff; color: #176fd8; }
+.tool-mint { background: #e7f7f0; color: #168b64; }
+.tool-orange { background: #fff0e3; color: #e27b2f; }
+.tool-violet { background: #f0edff; color: #715bd0; }
+
+.profile-tools-grid b,
+.profile-tools-grid small {
+  display: block;
+  white-space: nowrap;
+}
+
+.profile-tools-grid b {
+  font-size: 8px;
+}
+
+.profile-tools-grid small {
+  margin-top: 5px;
+  color: #8b99a2;
+  font-size: 7px;
+}
+
+.profile-menu {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.profile-menu > button {
+  width: 100%;
+  min-height: 62px;
+  padding: 10px 2px;
+  border-top: 1px solid var(--worker-line);
+  background: transparent;
+  color: var(--worker-ink);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+}
+
+.profile-menu > button:first-child {
+  border-top: 0;
+}
+
+.profile-menu > button > span {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #eef4f7;
+  color: #527184;
+  display: grid;
+  place-items: center;
+  flex: 0 0 34px;
+}
+
+.profile-menu > button > span svg {
+  width: 16px;
+}
+
+.profile-menu > button > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.profile-menu strong,
+.profile-menu small {
+  display: block;
+}
+
+.profile-menu strong {
+  font-size: 10px;
+}
+
+.profile-menu small {
+  margin-top: 5px;
+  color: #84949e;
+  font-size: 7px;
+}
+
+.profile-menu > button > b {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background: #ed654c;
+  color: #fff;
+  font-size: 7px;
+  display: grid;
+  place-items: center;
+}
+
+.profile-menu > button > svg {
+  width: 14px;
+  color: #9eabb3;
+}
+
+.worker-nav.is-hidden {
+  display: none;
+}
+
+.worker-nav button span {
+  display: block;
+}
+
+.worker-detail {
+  padding-bottom: 18px;
+}
+
+.worker-detail-head {
+  height: 70px;
+  padding: 0 13px 14px;
+  border-bottom: 1px solid var(--worker-line);
+  background: #fff;
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  align-items: end;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.worker-detail-head h2 {
+  margin: 0;
+  font-size: 15px;
+  text-align: center;
+}
+
+.worker-detail-head button {
+  min-width: 40px;
+  height: 30px;
+  padding: 0;
+  background: transparent;
+  color: #415966;
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.worker-detail-head button:last-child {
+  justify-self: end;
+}
+
+.worker-detail-head button svg {
+  width: 18px;
+}
+
+.worker-detail-head > span {
+  width: 40px;
+}
+
+.job-detail-status {
+  padding: 24px 18px;
+  background: linear-gradient(135deg, #163c59, #176fa2);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.job-detail-status > span {
+  width: 43px;
+  height: 43px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .11);
+  color: #75caff;
+  display: grid;
+  place-items: center;
+}
+
+.job-detail-status > span svg {
+  width: 21px;
+}
+
+.job-detail-status small,
+.job-detail-status strong,
+.job-detail-status p {
+  display: block;
+}
+
+.job-detail-status small {
+  color: #b5cbd8;
+  font-size: 7px;
+}
+
+.job-detail-status strong {
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+.job-detail-status p {
+  margin: 5px 0 0;
+  color: #b7cfdd;
+  font-size: 8px;
+}
+
+.worker-detail-body {
+  padding: 11px 12px 76px;
+}
+
+.detail-panel {
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.detail-panel:first-child {
+  margin-top: 0;
+}
+
+.job-detail-summary > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--worker-line);
+}
+
+.job-detail-summary > div:first-child > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.job-detail-summary strong,
+.job-detail-summary small {
+  display: block;
+}
+
+.job-detail-summary strong {
+  font-size: 11px;
+}
+
+.job-detail-summary small {
+  margin-top: 5px;
+  color: #86959f;
+  font-size: 7px;
+}
+
+.job-detail-summary > div:first-child > b {
+  color: var(--worker-blue);
+  font-size: 16px;
+}
+
+.job-detail-summary > p,
+.fee-panel > p {
+  margin: 0;
+  padding: 7px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 8px;
+}
+
+.job-detail-summary > p span,
+.fee-panel > p span {
+  color: #84949e;
+}
+
+.job-detail-summary > p strong {
+  max-width: 68%;
+  font-size: 8px;
+  text-align: right;
+}
+
+.detail-panel-title {
+  min-height: 26px;
+  margin-bottom: 11px;
+}
+
+.detail-panel-title > strong {
+  font-size: 12px;
+}
+
+.detail-panel-title > button {
+  padding: 5px 0 5px 8px;
+  background: transparent;
+  color: var(--worker-blue);
+  font-size: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.detail-panel-title > button svg {
+  width: 13px;
+  height: 13px;
+}
+
+.client-panel > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.client-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #e8f2ff;
+  color: #176fd8;
+  display: grid;
+  place-items: center;
+  flex: 0 0 36px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.client-avatar.mint {
+  background: #e7f7f0;
+  color: #168b64;
+}
+
+.client-panel > div:last-child > span:nth-child(2) {
+  min-width: 0;
+  flex: 1;
+}
+
+.client-panel strong,
+.client-panel small {
+  display: block;
+}
+
+.client-panel strong {
+  font-size: 10px;
+}
+
+.client-panel small {
+  margin-top: 5px;
+  color: #84939d;
+  font-size: 7px;
+}
+
+.client-panel em {
+  padding: 5px 7px;
+  border-radius: 10px;
+  background: #e8f7f0;
+  color: var(--worker-green);
+  font-size: 7px;
+  font-style: normal;
+}
+
+.service-requirements {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.service-requirements li {
+  padding: 7px 0 7px 15px;
+  color: #607481;
+  font-size: 8px;
+  line-height: 1.5;
+  position: relative;
+}
+
+.service-requirements li::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 12px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--worker-blue);
+}
+
+.fee-panel > p b {
+  font-size: 8px;
+}
+
+.fee-panel > p.total {
+  margin-top: 6px;
+  padding-top: 12px;
+  border-top: 1px solid var(--worker-line);
+}
+
+.fee-panel > p.total strong {
+  color: var(--worker-blue);
+  font-size: 14px;
+}
+
+.worker-sticky-actions {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 64px;
+  padding: 9px 13px;
+  border-top: 1px solid var(--worker-line);
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 8px;
+  z-index: 7;
+}
+
+.worker-sticky-actions button {
+  border: 1px solid #dce5ea;
+  background: #fff;
+  color: #5e7280;
+  font-size: 10px;
+}
+
+.worker-sticky-actions .primary {
+  border-color: var(--worker-blue);
+  background: var(--worker-blue);
+  color: #fff;
+}
+
+.cert-status {
+  padding: 24px 20px;
+  background: #e9f7f1;
+  color: var(--worker-green);
+  text-align: center;
+}
+
+.cert-status > svg {
+  width: 38px;
+  height: 38px;
+}
+
+.cert-status strong,
+.cert-status small {
+  display: block;
+}
+
+.cert-status strong {
+  margin-top: 9px;
+  font-size: 14px;
+}
+
+.cert-status small {
+  margin-top: 6px;
+  color: #6f8d80;
+  font-size: 8px;
+}
+
+.cert-progress {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+}
+
+.cert-progress::before {
+  content: "";
+  position: absolute;
+  left: 17%;
+  right: 17%;
+  top: 24px;
+  height: 1px;
+  background: #9ed5bd;
+}
+
+.cert-step {
+  color: #87969f;
+  font-size: 8px;
+  text-align: center;
+  position: relative;
+}
+
+.cert-step i {
+  width: 19px;
+  height: 19px;
+  margin: 0 auto 7px;
+  padding: 4px;
+  border-radius: 50%;
+  background: var(--worker-green);
+  color: #fff;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.cert-info p {
+  margin: 0;
+  padding: 9px 0;
+  border-top: 1px solid var(--worker-line);
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+}
+
+.cert-info p:first-child {
+  border-top: 0;
+}
+
+.cert-info span {
+  color: #84949d;
+}
+
+.cert-info em {
+  color: var(--worker-green);
+  font-style: normal;
+}
+
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.certificate-grid button {
+  min-height: 90px;
+  padding: 12px 5px;
+  border-radius: 6px;
+  background: #f6f9fa;
+  color: var(--worker-ink);
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+
+.certificate-grid svg {
+  width: 22px;
+  height: 22px;
+  color: var(--worker-blue);
+}
+
+.certificate-grid b,
+.certificate-grid small {
+  display: block;
+}
+
+.certificate-grid b {
+  margin-top: 8px;
+  font-size: 9px;
+}
+
+.certificate-grid small {
+  margin-top: 5px;
+  color: var(--worker-green);
+  font-size: 7px;
+}
+
+.withdraw-body {
+  padding-bottom: 20px;
+}
+
+.withdraw-card > small {
+  color: #82939e;
+  font-size: 8px;
+}
+
+.withdraw-card > strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 24px;
+}
+
+.withdraw-card label {
+  display: block;
+  margin-top: 20px;
+  font-size: 9px;
+}
+
+.withdraw-card label > div {
+  height: 49px;
+  margin-top: 8px;
+  border-bottom: 1px solid var(--worker-line);
+  display: grid;
+  grid-template-columns: 22px 1fr 38px;
+  align-items: center;
+}
+
+.withdraw-card label span {
+  font-size: 20px;
+}
+
+.withdraw-card input {
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--worker-ink);
+  font-size: 18px;
+}
+
+.withdraw-card label button {
+  background: transparent;
+  color: var(--worker-blue);
+  font-size: 8px;
+}
+
+.amount-options {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.amount-options button {
+  height: 32px;
+  border-radius: 4px;
+  background: #eef4f7;
+  color: #547080;
+  font-size: 8px;
+}
+
+.amount-options button.active {
+  background: #e8f2ff;
+  color: var(--worker-blue);
+}
+
+.withdraw-account > button {
+  width: 100%;
+  padding: 2px 0;
+  background: transparent;
+  color: var(--worker-ink);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+}
+
+.wechat-icon {
+  width: 37px;
+  height: 37px;
+  border-radius: 8px;
+  background: #e7f7f0;
+  color: var(--worker-green);
+  display: grid;
+  place-items: center;
+}
+
+.wechat-icon svg {
+  width: 18px;
+}
+
+.withdraw-account button > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.withdraw-account strong,
+.withdraw-account small {
+  display: block;
+}
+
+.withdraw-account strong {
+  font-size: 10px;
+}
+
+.withdraw-account small {
+  margin-top: 5px;
+  color: #84949d;
+  font-size: 7px;
+}
+
+.withdraw-account button > svg {
+  width: 14px;
+  color: #9eabb3;
+}
+
+.withdraw-note {
+  margin: 13px 3px;
+  color: #7f909a;
+  font-size: 7px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.withdraw-note svg {
+  width: 13px;
+}
+
+.withdraw-submit {
+  width: 100%;
+  height: 43px;
+  border-radius: 4px;
+  background: var(--worker-blue);
+  color: #fff;
+  font-size: 10px;
+}
+
+.withdraw-summary {
+  min-height: 100px;
+  padding: 18px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #173b57, #176e9f);
+  color: #fff;
+}
+
+.withdraw-summary span,
+.withdraw-summary strong,
+.withdraw-summary small {
+  display: block;
+}
+
+.withdraw-summary span,
+.withdraw-summary small {
+  color: #bad0dd;
+  font-size: 8px;
+}
+
+.withdraw-summary strong {
+  margin: 10px 0 7px;
+  font-size: 22px;
+}
+
+.record-list {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.record-item > span:last-child {
+  text-align: right;
+}
+
+.record-item > span:last-child b,
+.record-item > span:last-child em {
+  display: block;
+}
+
+.record-item > span:last-child b {
+  font-size: 9px;
+}
+
+.record-item > span:last-child em {
+  margin-top: 5px;
+  color: var(--worker-green);
+  font-size: 7px;
+  font-style: normal;
+}
+
+.review-overview {
+  padding: 22px 24px;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 25px;
+  align-items: center;
+}
+
+.review-overview > div:first-child {
+  text-align: center;
+}
+
+.review-overview > div:first-child strong,
+.review-overview > div:first-child small {
+  display: block;
+}
+
+.review-overview > div:first-child strong {
+  font-size: 30px;
+}
+
+.review-overview > div:first-child > span {
+  margin-top: 6px;
+  color: #ef9a3c;
+  display: flex;
+  justify-content: center;
+}
+
+.review-overview > div:first-child svg {
+  width: 11px;
+  height: 11px;
+  fill: currentColor;
+}
+
+.review-overview > div:first-child small {
+  margin-top: 6px;
+  color: #87969f;
+  font-size: 7px;
+}
+
+.review-overview > div:last-child {
+  padding-left: 20px;
+  border-left: 1px solid var(--worker-line);
+}
+
+.review-overview p {
+  margin: 0;
+  padding: 4px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+}
+
+.review-overview p span {
+  color: #7f909a;
+}
+
+.reviews-body {
+  padding-bottom: 18px;
+}
+
+.review-card {
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.review-card > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.review-card > div:first-child > span:nth-child(2) {
+  min-width: 0;
+  flex: 1;
+}
+
+.review-card strong,
+.review-card small {
+  display: block;
+}
+
+.review-card strong {
+  font-size: 10px;
+}
+
+.review-card small {
+  margin-top: 5px;
+  color: #84949d;
+  font-size: 7px;
+}
+
+.review-card > div:first-child em {
+  color: #e58a35;
+  font-size: 8px;
+  font-style: normal;
+}
+
+.review-card > p {
+  margin: 12px 0 0;
+  color: #586e7c;
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+.scope-summary {
+  min-height: 72px;
+  padding: 14px;
+  border-radius: 8px;
+  background: #eaf4ff;
+  color: var(--worker-blue);
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.scope-summary > svg {
+  width: 26px;
+}
+
+.scope-summary strong,
+.scope-summary small {
+  display: block;
+}
+
+.scope-summary strong {
+  font-size: 11px;
+}
+
+.scope-summary small {
+  margin-top: 5px;
+  color: #6685a0;
+  font-size: 7px;
+}
+
+.scope-list {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.scope-item {
+  min-height: 68px;
+  padding: 10px 0;
+  border-top: 1px solid var(--worker-line);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.scope-item:first-child {
+  border-top: 0;
+}
+
+.scope-item > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.scope-item strong,
+.scope-item small {
+  display: block;
+}
+
+.scope-item strong {
+  font-size: 10px;
+}
+
+.scope-item small {
+  margin-top: 5px;
+  color: #83939d;
+  font-size: 7px;
+}
+
+.mini-switch {
+  width: 38px;
+  height: 22px;
+  background: #ccd6dc;
+}
+
+.mini-switch span {
+  width: 16px;
+  height: 16px;
+  margin-left: 0;
+}
+
+.mini-switch.active {
+  background: var(--worker-blue);
+}
+
+.mini-switch.active span {
+  margin-left: 16px;
+}
+
+.notice-list {
+  padding-bottom: 18px;
+}
+
+.notice-list > button {
+  width: 100%;
+  min-height: 82px;
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--worker-ink);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  text-align: left;
+}
+
+.notice-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 38px;
+}
+
+.notice-icon svg {
+  width: 18px;
+}
+
+.notice-list > button > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.notice-list strong,
+.notice-list small {
+  display: block;
+}
+
+.notice-list strong {
+  font-size: 10px;
+}
+
+.notice-list p {
+  margin: 6px 0 0;
+  color: #637783;
+  font-size: 8px;
+  line-height: 1.45;
+}
+
+.notice-list small {
+  margin-top: 7px;
+  color: #909da5;
+  font-size: 7px;
+}
+
+.notice-list > button > b {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ed654c;
+  flex: 0 0 7px;
+}
+
+.settings-body {
+  padding-bottom: 18px;
+}
+
+.settings-list {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.settings-list > div,
+.settings-list > button {
+  width: 100%;
+  min-height: 62px;
+  padding: 9px 0;
+  border-top: 1px solid var(--worker-line);
+  background: transparent;
+  color: var(--worker-ink);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.settings-list > :first-child {
+  border-top: 0;
+}
+
+.settings-list strong,
+.settings-list small {
+  display: block;
+}
+
+.settings-list strong {
+  font-size: 10px;
+}
+
+.settings-list small {
+  margin-top: 6px;
+  color: #83939d;
+  font-size: 7px;
+}
+
+.settings-list em {
+  color: #758792;
+  font-size: 8px;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+}
+
+.settings-list em svg {
+  width: 14px;
+}
+
+.worker-toast {
+  min-width: 150px;
+  border-radius: 4px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 20;
+}
+
+@media (max-width: 360px) {
+  .worker-main,
+  .wallet-main,
+  .worker-detail-body {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .worker-home-head,
+  .worker-profile-head {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .dispatch-mode {
+    padding: 12px;
+  }
+
+  .mode-segment button {
+    padding: 0 7px;
+  }
+
+  .worker-job-foot button {
+    min-width: 55px;
+    padding: 0 7px;
+  }
+
+  .profile-tools-grid button > span {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+</style>
+</head>
+<body class="phone-page worker worker-app">
+  <a class="back" href="index.html#features"><i data-lucide="arrow-left"></i>返回案例</a>
+  <main class="device">
+    <div class="scroll">
+      <section class="view active worker-root" id="w-hall">
+        <header class="worker-home-head">
+          <div class="worker-topbar">
+            <button class="worker-identity" data-go="w-certification">
+              <span class="worker-avatar">周</span>
+              <span><small>下午好</small><strong>周师傅</strong></span>
+              <i data-lucide="badge-check"></i>
+            </button>
+            <div class="worker-head-actions">
+              <button data-toast="扫码签到入口已打开" aria-label="扫码签到"><i data-lucide="scan-line"></i></button>
+              <button data-go="w-notices" aria-label="消息中心"><i data-lucide="bell"></i><b>3</b></button>
+            </div>
+          </div>
+
+          <section class="work-status-card">
+            <div class="work-status-copy">
+              <span class="online-dot"></span>
+              <div><strong class="status-text">接单中</strong><small>系统正在匹配附近优质订单</small></div>
+            </div>
+            <button class="work-switch" aria-label="切换上班状态"><span></span></button>
+          </section>
+
+          <div class="worker-stats">
+            <button data-go="w-orders"><strong>8<small>单</small></strong><span>今日完成</span></button>
+            <button data-go="w-wallet"><strong>¥862</strong><span>今日收入</span></button>
+            <button data-go="w-reviews"><strong>4.9</strong><span>服务评分</span></button>
+          </div>
+        </header>
+
+        <div class="worker-main">
+          <section class="dispatch-mode">
+            <div><strong>接单模式</strong><small>可随时切换工作方式</small></div>
+            <div class="mode-segment worker-filter"><button class="active" data-mode="抢单模式">抢单模式</button><button data-mode="派单模式">派单模式</button></div>
+          </section>
+
+          <button class="assigned-order" data-job="深度保洁" data-price="¥218" data-time="今天 14:00–17:00" data-address="西湖区文三路188号 A座1206">
+            <span><i data-lucide="zap"></i></span>
+            <div><small>平台指派订单 · 需在10分钟内确认</small><strong>深度保洁 · 距您1.2km</strong></div>
+            <em>待确认</em>
+          </button>
+
+          <section class="worker-section">
+            <div class="worker-section-title"><div><strong>附近新订单</strong><small>已按距离和技能为您推荐</small></div><button data-toast="已刷新附近订单"><i data-lucide="refresh-cw"></i></button></div>
+            <div class="worker-filters worker-filter"><button class="active">全部</button><button>保洁</button><button>家电清洗</button><button>维修安装</button></div>
+
+            <article class="worker-job-card">
+              <div class="worker-job-head"><span class="job-icon blue"><i data-lucide="air-vent"></i></span><div><strong>油烟机深度清洗</strong><small>订单号 LJ0715018</small></div><em>1.6km</em></div>
+              <div class="worker-job-info"><p><i data-lucide="clock-3"></i>今天 15:30 · 预计90分钟</p><p><i data-lucide="map-pin"></i>西湖区学院路 · 已付全款</p></div>
+              <div class="worker-job-tags"><span>技能匹配</span><span>停车方便</span><span class="warm">老客户</span></div>
+              <div class="worker-job-foot"><div><small>预计佣金</small><strong>¥138</strong></div><button class="ghost" data-job="油烟机深度清洗" data-price="¥138" data-time="今天 15:30–17:00" data-address="西湖区学院路88号">查看</button><button class="accept" data-accept>立即抢单</button></div>
+            </article>
+
+            <article class="worker-job-card">
+              <div class="worker-job-head"><span class="job-icon mint"><i data-lucide="sparkles"></i></span><div><strong>三居室日常保洁</strong><small>订单号 LJ0715026</small></div><em>2.3km</em></div>
+              <div class="worker-job-info"><p><i data-lucide="clock-3"></i>明天 09:00 · 预计3小时</p><p><i data-lucide="map-pin"></i>拱墅区湖墅南路 · 电梯房</p></div>
+              <div class="worker-job-tags"><span>时间合适</span><span class="warm">连续服务</span></div>
+              <div class="worker-job-foot"><div><small>预计佣金</small><strong>¥186</strong></div><button class="ghost" data-job="三居室日常保洁" data-price="¥186" data-time="明天 09:00–12:00" data-address="拱墅区湖墅南路66号">查看</button><button class="accept" data-accept>立即抢单</button></div>
+            </article>
+          </section>
+        </div>
+      </section>
+
+      <section class="view worker-root" id="w-orders">
+        <header class="worker-page-head"><div><strong>服务订单</strong><small>规范履约，服务进度清晰可控</small></div><button data-toast="日历视图已打开"><i data-lucide="calendar-days"></i></button></header>
+        <div class="worker-main">
+          <section class="order-summary-strip">
+            <div><strong>2</strong><small>待服务</small></div><div><strong>1</strong><small>服务中</small></div><div><strong>36</strong><small>本月完成</small></div><div><strong>98.6%</strong><small>准时率</small></div>
+          </section>
+          <div class="worker-order-tabs worker-filter"><button class="active">全部</button><button>待服务</button><button>服务中</button><button>已完成</button></div>
+
+          <section class="worker-order-list">
+            <article class="service-order-card active-order">
+              <div class="service-order-head"><span>订单 LJ20260715001</span><em class="serving">服务中</em></div>
+              <div class="service-order-title"><span class="job-icon blue"><i data-lucide="sparkles"></i></span><div><strong>深度保洁 · 三小时</strong><small>今天 14:00–17:00</small></div><b>¥218</b></div>
+              <div class="service-order-address"><i data-lucide="map-pin"></i><span>西湖区文三路188号 A座1206<small>陈女士 · 138****6688</small></span><button data-toast="正在导航至服务地址"><i data-lucide="navigation"></i></button></div>
+              <div class="service-progress"><span class="done">已接单</span><span class="done">已签到</span><span class="active">服务中</span><span>待完成</span></div>
+              <div class="service-order-actions"><button data-job="深度保洁" data-price="¥218" data-time="今天 14:00–17:00" data-address="西湖区文三路188号 A座1206">订单详情</button><button class="primary" data-progress>完成服务</button></div>
+            </article>
+
+            <article class="service-order-card">
+              <div class="service-order-head"><span>订单 LJ20260716008</span><em class="waiting">待服务</em></div>
+              <div class="service-order-title"><span class="job-icon orange"><i data-lucide="air-vent"></i></span><div><strong>空调深度清洗</strong><small>明天 09:00–10:30</small></div><b>¥128</b></div>
+              <div class="service-order-address"><i data-lucide="map-pin"></i><span>拱墅区湖墅南路66号<small>王先生 · 136****2819</small></span><button data-toast="正在导航至服务地址"><i data-lucide="navigation"></i></button></div>
+              <div class="service-order-actions"><button data-toast="正在联系客户">联系客户</button><button class="primary" data-progress>到达签到</button></div>
+            </article>
+
+            <article class="service-order-card completed-order">
+              <div class="service-order-head"><span>订单 LJ20260712018</span><em class="completed">已完成</em></div>
+              <div class="service-order-title"><span class="job-icon mint"><i data-lucide="brush"></i></span><div><strong>日常保洁 · 两小时</strong><small>7月12日 10:00–12:00</small></div><b>¥90</b></div>
+              <div class="service-order-actions"><button data-go="w-reviews">查看评价</button><button data-job="日常保洁" data-price="¥90" data-time="7月12日 10:00–12:00" data-address="西湖区文三路188号">订单详情</button></div>
+            </article>
+          </section>
+        </div>
+      </section>
+
+      <section class="view worker-root" id="w-wallet">
+        <header class="worker-page-head"><div><strong>佣金钱包</strong><small>收入明细与结算清晰透明</small></div><button data-toast="结算规则：订单完成后24小时入账"><i data-lucide="circle-help"></i></button></header>
+        <div class="wallet-main">
+          <section class="wallet-balance">
+            <div><small>可提现余额（元）</small><strong>6,280.00</strong><span><i data-lucide="shield-check"></i>资金由微信支付安全托管</span></div>
+            <button data-go="w-withdraw">立即提现</button>
+          </section>
+          <section class="wallet-assets"><button data-toast="本月收入 ¥8,620"><strong>¥8,620</strong><span>本月收入</span></button><button data-toast="待结算金额 ¥356"><strong>¥356</strong><span>待结算</span></button><button data-go="w-withdraw-records"><strong>3笔</strong><span>本月提现</span></button></section>
+
+          <section class="worker-section income-chart">
+            <div class="worker-section-title"><div><strong>近7日收入</strong><small>合计 ¥2,486</small></div><button data-toast="已切换月度收入">本周<i data-lucide="chevron-down"></i></button></div>
+            <div class="income-bars"><span style="--h:42%"><i>周三</i></span><span style="--h:58%"><i>周四</i></span><span style="--h:35%"><i>周五</i></span><span style="--h:76%"><i>周六</i></span><span style="--h:64%"><i>周日</i></span><span style="--h:88%"><i>周一</i></span><span class="today" style="--h:70%"><i>今天</i></span></div>
+          </section>
+
+          <section class="worker-section wallet-list">
+            <div class="worker-section-title"><div><strong>佣金明细</strong><small>订单收入自动分佣到账</small></div><button data-go="w-withdraw-records">全部记录<i data-lucide="chevron-right"></i></button></div>
+            <div class="wallet-item"><span class="wallet-icon income"><i data-lucide="arrow-down-left"></i></span><div><strong>深度保洁佣金入账</strong><small>今天 17:08 · LJ20260715001</small></div><em>+¥218.00</em></div>
+            <div class="wallet-item"><span class="wallet-icon income"><i data-lucide="arrow-down-left"></i></span><div><strong>油烟机清洗佣金入账</strong><small>昨天 16:32 · LJ20260714008</small></div><em>+¥138.00</em></div>
+            <div class="wallet-item"><span class="wallet-icon payout"><i data-lucide="arrow-up-right"></i></span><div><strong>提现至微信零钱</strong><small>7月12日 10:06</small></div><em class="minus">-¥2,000.00</em></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="view worker-root" id="w-me">
+        <header class="worker-profile-head">
+          <div class="worker-profile-tools"><button data-go="w-notices"><i data-lucide="bell"></i><b>3</b></button><button data-go="w-settings"><i data-lucide="settings"></i></button></div>
+          <button class="worker-profile-card" data-go="w-certification"><span class="worker-avatar large">周</span><span><strong>周师傅 <em><i data-lucide="badge-check"></i>已认证</em></strong><small>高级保洁师 · 从业8年</small></span><i data-lucide="chevron-right"></i></button>
+          <div class="profile-metrics"><button data-go="w-orders"><strong>1,268</strong><small>服务订单</small></button><button data-go="w-reviews"><strong>99.6%</strong><small>好评率</small></button><button data-go="w-reviews"><strong>4.9</strong><small>综合评分</small></button></div>
+        </header>
+        <div class="worker-main profile-main">
+          <section class="growth-card"><div><small>本月成长值</small><strong>金牌师傅</strong><span><i style="width:78%"></i></span><em>再完成12单可升级</em></div><i data-lucide="award"></i></section>
+
+          <section class="worker-section profile-panel">
+            <div class="worker-section-title"><div><strong>工作管理</strong><small>维护技能与接单设置</small></div></div>
+            <div class="profile-tools-grid">
+              <button data-go="w-certification"><span class="tool-blue"><i data-lucide="badge-check"></i></span><b>入驻认证</b><small>资料已通过</small></button>
+              <button data-go="w-service-scope"><span class="tool-mint"><i data-lucide="briefcase-business"></i></span><b>服务项目</b><small>已开通4项</small></button>
+              <button data-go="w-reviews"><span class="tool-orange"><i data-lucide="star"></i></span><b>客户评价</b><small>好评99.6%</small></button>
+              <button data-go="w-settings"><span class="tool-violet"><i data-lucide="sliders-horizontal"></i></span><b>接单设置</b><small>半径5km</small></button>
+            </div>
+          </section>
+
+          <section class="worker-section profile-menu">
+            <button data-go="w-wallet"><span><i data-lucide="wallet-cards"></i></span><div><strong>我的佣金</strong><small>查看收入与结算明细</small></div><i data-lucide="chevron-right"></i></button>
+            <button data-go="w-notices"><span><i data-lucide="message-square-text"></i></span><div><strong>消息中心</strong><small>订单提醒、平台公告</small></div><b>3</b><i data-lucide="chevron-right"></i></button>
+            <button data-toast="师傅客服会话已建立"><span><i data-lucide="headphones"></i></span><div><strong>师傅客服</strong><small>服务时间 08:00–22:00</small></div><i data-lucide="chevron-right"></i></button>
+            <button data-go="w-settings"><span><i data-lucide="shield-check"></i></span><div><strong>账号与安全</strong><small>隐私、通知和账号管理</small></div><i data-lucide="chevron-right"></i></button>
+          </section>
+        </div>
+      </section>
+
+      <section class="view worker-detail" id="w-job-detail">
+        <header class="worker-detail-head"><button data-back><i data-lucide="chevron-left"></i></button><h2>订单详情</h2><button data-toast="已联系平台调度"><i data-lucide="headphones"></i></button></header>
+        <div class="job-detail-status"><span><i data-lucide="clipboard-check"></i></span><div><small>当前状态</small><strong>等待师傅确认接单</strong><p>请确认服务时间与距离后接单</p></div></div>
+        <div class="worker-detail-body">
+          <section class="detail-panel job-detail-summary"><div><span class="job-icon blue"><i data-lucide="sparkles"></i></span><div><strong class="detail-job-name">深度保洁</strong><small>标准上门服务</small></div><b class="detail-job-price">¥218</b></div><p><span>服务时间</span><strong class="detail-job-time">今天 14:00–17:00</strong></p><p><span>服务地址</span><strong class="detail-job-address">西湖区文三路188号</strong></p><p><span>结算方式</span><strong>服务完成后自动分佣</strong></p></section>
+          <section class="detail-panel client-panel"><div class="detail-panel-title"><strong>客户信息</strong><button data-toast="正在联系客户"><i data-lucide="phone"></i>联系客户</button></div><div><span class="client-avatar">陈</span><span><strong>陈女士</strong><small>平台客户 · 已完成12次服务</small></span><em>信用良好</em></div></section>
+          <section class="detail-panel"><div class="detail-panel-title"><strong>服务要求</strong></div><ul class="service-requirements"><li>厨房重油污与卫生间死角深度清洁</li><li>携带专业清洁工具和环保清洁剂</li><li>上门前15分钟电话联系客户</li></ul></section>
+          <section class="detail-panel fee-panel"><div class="detail-panel-title"><strong>费用明细</strong></div><p><span>订单实付</span><b>¥268.00</b></p><p><span>平台服务费</span><b>-¥50.00</b></p><p class="total"><span>预计佣金</span><strong class="detail-job-price">¥218.00</strong></p></section>
+        </div>
+        <div class="worker-sticky-actions"><button data-toast="订单已暂时忽略">暂不接单</button><button class="primary" data-detail-accept>确认接单</button></div>
+      </section>
+
+      <section class="view worker-detail" id="w-certification">
+        <header class="worker-detail-head"><button data-back><i data-lucide="chevron-left"></i></button><h2>入驻认证</h2><button data-toast="认证规则页面已打开"><i data-lucide="circle-help"></i></button></header>
+        <div class="cert-status"><i data-lucide="badge-check"></i><strong>平台认证已通过</strong><small>认证编号 HZ202601268 · 2026.03.18通过</small></div>
+        <div class="worker-detail-body">
+          <section class="detail-panel cert-progress"><div class="cert-step done"><i data-lucide="check"></i><span>提交资料</span></div><div class="cert-step done"><i data-lucide="check"></i><span>平台审核</span></div><div class="cert-step done"><i data-lucide="check"></i><span>认证通过</span></div></section>
+          <section class="detail-panel"><div class="detail-panel-title"><strong>身份信息</strong><button data-toast="身份资料编辑入口已打开">编辑</button></div><div class="cert-info"><p><span>真实姓名</span><b>周建国</b></p><p><span>身份证号</span><b>3301**********2818</b></p><p><span>手机号</span><b>138****6688</b></p><p><span>实名认证</span><em>已通过</em></p></div></section>
+          <section class="detail-panel"><div class="detail-panel-title"><strong>资质证书</strong><button data-toast="资质上传入口已打开"><i data-lucide="plus"></i>补充资料</button></div><div class="certificate-grid"><button data-toast="身份证资料已通过"><i data-lucide="id-card"></i><b>身份证</b><small>审核通过</small></button><button data-toast="技能证书资料已通过"><i data-lucide="award"></i><b>技能证书</b><small>审核通过</small></button><button data-toast="健康证明有效期至2027年3月"><i data-lucide="heart-pulse"></i><b>健康证明</b><small>有效期内</small></button></div></section>
+        </div>
+      </section>
+
+      <section class="view worker-detail" id="w-withdraw">
+        <header class="worker-detail-head"><button data-back><i data-lucide="chevron-left"></i></button><h2>余额提现</h2><button data-go="w-withdraw-records">记录</button></header>
+        <div class="worker-detail-body withdraw-body">
+          <section class="detail-panel withdraw-card"><small>可提现余额</small><strong>¥6,280.00</strong><label>提现金额<div><span>¥</span><input class="withdraw-input" inputmode="decimal" placeholder="请输入提现金额"><button data-withdraw-all>全部</button></div></label><div class="amount-options"><button data-amount="500">¥500</button><button data-amount="1000">¥1,000</button><button data-amount="2000">¥2,000</button></div></section>
+          <section class="detail-panel withdraw-account"><div class="detail-panel-title"><strong>到账账户</strong></div><button data-toast="提现账户选择入口已打开"><span class="wechat-icon"><i data-lucide="message-circle"></i></span><div><strong>微信零钱</strong><small>微信用户 · 已实名认证</small></div><i data-lucide="chevron-right"></i></button></section>
+          <p class="withdraw-note"><i data-lucide="info"></i>预计2小时内到账，单笔提现金额不低于10元</p>
+          <button class="withdraw-submit" data-withdraw-submit>确认提现</button>
+        </div>
+      </section>
+
+      <section class="view worker-detail" id="w-withdraw-records">
+        <header class="worker-detail-head"><button data-back><i data-lucide="chevron-left"></i></button><h2>提现记录</h2><span></span></header>
+        <div class="worker-detail-body"><section class="withdraw-summary"><span>本月累计提现</span><strong>¥5,000.00</strong><small>3笔 · 均已到账</small></section><section class="detail-panel record-list"><div class="record-item"><span class="wallet-icon payout"><i data-lucide="wallet"></i></span><div><strong>提现至微信零钱</strong><small>7月12日 10:06</small></div><span><b>-¥2,000.00</b><em>已到账</em></span></div><div class="record-item"><span class="wallet-icon payout"><i data-lucide="wallet"></i></span><div><strong>提现至微信零钱</strong><small>7月05日 18:32</small></div><span><b>-¥2,000.00</b><em>已到账</em></span></div><div class="record-item"><span class="wallet-icon payout"><i data-lucide="wallet"></i></span><div><strong>提现至微信零钱</strong><small>7月01日 09:18</small></div><span><b>-¥1,000.00</b><em>已到账</em></span></div></section></div>
+      </section>
+
+      <section class="view worker-detail" id="w-reviews">
+        <header class="worker-detail-head"><button data-back><i data-lucide="chevron-left"></i></button><h2>客户评价</h2><span></span></header>
+        <div class="review-overview"><div><strong>4.9</strong><span><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></span><small>综合评分</small></div><div><p><span>服务质量</span><b>4.9</b></p><p><span>准时守约</span><b>5.0</b></p><p><span>沟通态度</span><b>4.9</b></p></div></div>
+        <div class="worker-detail-body reviews-body"><div class="worker-filters worker-filter"><button class="active">全部 1,263</button><button>有图 286</button><button>最新</button></div><article class="review-card"><div><span class="client-avatar">陈</span><span><strong>陈女士</strong><small>7月15日 · 深度保洁</small></span><em>5.0分</em></div><p>师傅准时到达，厨房油污和卫生间死角都清理得很细致，工具也很专业。</p><div class="review-tags"><span>准时上门</span><span>服务专业</span><span>沟通耐心</span></div></article><article class="review-card"><div><span class="client-avatar mint">王</span><span><strong>王先生</strong><small>7月12日 · 家电清洗</small></span><em>5.0分</em></div><p>空调清洗得很干净，结束后现场也收拾好了，下次还会预约。</p><div class="review-tags"><span>工具齐全</span><span>现场整洁</span></div></article></div>
+      </section>
+
+      <section class="view worker-detail" id="w-service-scope">
+        <header class="worker-detail-head"><button data-back><i data-lucide="chevron-left"></i></button><h2>服务项目</h2><button data-toast="服务项目设置已保存">保存</button></header>
+        <div class="worker-detail-body"><section class="scope-summary"><i data-lucide="briefcase-business"></i><div><strong>已开通 4 项服务</strong><small>平台会根据技能认证匹配订单</small></div></section><section class="detail-panel scope-list"><div class="scope-item"><span class="job-icon blue"><i data-lucide="sparkles"></i></span><div><strong>日常保洁</strong><small>钟点清洁、全屋除尘</small></div><button class="mini-switch active" data-mini-switch><span></span></button></div><div class="scope-item"><span class="job-icon mint"><i data-lucide="house"></i></span><div><strong>深度清洁</strong><small>厨房、卫生间深度清洁</small></div><button class="mini-switch active" data-mini-switch><span></span></button></div><div class="scope-item"><span class="job-icon orange"><i data-lucide="air-vent"></i></span><div><strong>家电清洗</strong><small>空调、油烟机、洗衣机</small></div><button class="mini-switch active" data-mini-switch><span></span></button></div><div class="scope-item"><span class="job-icon violet"><i data-lucide="wrench"></i></span><div><strong>维修安装</strong><small>水电、灯具、家具安装</small></div><button class="mini-switch active" data-mini-switch><span></span></button></div><div class="scope-item"><span class="job-icon slate"><i data-lucide="truck"></i></span><div><strong>搬家服务</strong><small>需补充搬运资质</small></div><button class="mini-switch" data-mini-switch><span></span></button></div></section></div>
+      </section>
+
+      <section class="view worker-detail" id="w-notices">
+        <header class="worker-detail-head"><button data-back><i data-lucide="chevron-left"></i></button><h2>消息中心</h2><button data-toast="全部消息已标记为已读">全部已读</button></header>
+        <div class="worker-detail-body notice-list"><button data-job="深度保洁" data-price="¥218" data-time="今天 14:00–17:00" data-address="西湖区文三路188号 A座1206"><span class="notice-icon blue"><i data-lucide="zap"></i></span><div><strong>您有一笔新的指派订单</strong><p>深度保洁 · 距您1.2km，请及时确认</p><small>10分钟前</small></div><b></b></button><button data-go="w-wallet"><span class="notice-icon mint"><i data-lucide="wallet-cards"></i></span><div><strong>佣金已到账</strong><p>订单 LJ20260714008 佣金 ¥138 已入账</p><small>昨天 16:32</small></div><b></b></button><button data-toast="平台公告详情已打开"><span class="notice-icon orange"><i data-lucide="megaphone"></i></span><div><strong>高温服务补贴通知</strong><p>本周完成指定订单可获得额外补贴</p><small>7月14日</small></div><b></b></button></div>
+      </section>
+
+      <section class="view worker-detail" id="w-settings">
+        <header class="worker-detail-head"><button data-back><i data-lucide="chevron-left"></i></button><h2>接单设置</h2><span></span></header>
+        <div class="worker-detail-body settings-body"><section class="detail-panel settings-list"><div><span><strong>新订单提醒</strong><small>语音和震动提醒</small></span><button class="mini-switch active" data-mini-switch><span></span></button></div><div><span><strong>自动接收派单</strong><small>符合技能和距离时自动确认</small></span><button class="mini-switch" data-mini-switch><span></span></button></div><button data-toast="服务半径选择入口已打开"><span><strong>接单服务半径</strong><small>当前位置周边</small></span><em>5km<i data-lucide="chevron-right"></i></em></button><button data-toast="常用服务区域设置已打开"><span><strong>常用服务区域</strong><small>杭州市西湖区、拱墅区</small></span><em><i data-lucide="chevron-right"></i></em></button></section><section class="detail-panel settings-list"><button data-toast="隐私政策页面已打开"><span><strong>隐私与安全</strong><small>账号、实名信息与隐私设置</small></span><em><i data-lucide="chevron-right"></i></em></button><button data-toast="当前已是最新版本"><span><strong>版本信息</strong><small>邻家帮师傅端</small></span><em>v1.0.0</em></button></section></div>
+      </section>
+    </div>
+
+    <nav class="nav worker-nav">
+      <button class="active" data-nav="w-hall"><i data-lucide="radio-tower"></i><span>接单</span></button>
+      <button data-nav="w-orders"><i data-lucide="clipboard-check"></i><span>订单</span></button>
+      <button data-nav="w-wallet"><i data-lucide="wallet"></i><span>佣金</span></button>
+      <button data-nav="w-me"><i data-lucide="user-round"></i><span>我的</span></button>
+    </nav>
+    <div class="toast worker-toast"></div>
+  </main>
+  <script defer src="lucide.min.js"></script>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.lucide) window.lucide.createIcons();
+
+  const device = document.querySelector('.device');
+  const scroll = document.querySelector('.scroll');
+  const nav = document.querySelector('.worker-nav');
+  const toast = document.querySelector('.worker-toast');
+  const views = [...document.querySelectorAll('.view')];
+  const rootViews = ['w-hall', 'w-orders', 'w-wallet', 'w-me'];
+  const history = [];
+
+  const note = (message) => {
+    toast.textContent = message;
+    toast.classList.add('show');
+    clearTimeout(window.workerToastTimer);
+    window.workerToastTimer = setTimeout(() => toast.classList.remove('show'), 1600);
+  };
+
+  const show = (id, push = true) => {
+    const target = document.getElementById(id);
+    if (!target) return;
+    const current = views.find((view) => view.classList.contains('active'));
+    if (push && current && current.id !== id) history.push(current.id);
+    views.forEach((view) => view.classList.toggle('active', view.id === id));
+    nav.classList.toggle('is-hidden', !rootViews.includes(id));
+    nav.querySelectorAll('[data-nav]').forEach((button) => {
+      button.classList.toggle('active', button.dataset.nav === id);
+    });
+    scroll.scrollTop = 0;
+  };
+
+  nav.querySelectorAll('[data-nav]').forEach((button) => {
+    button.addEventListener('click', () => {
+      history.length = 0;
+      show(button.dataset.nav, false);
+    });
+  });
+
+  device.querySelectorAll('[data-go]').forEach((button) => {
+    button.addEventListener('click', (event) => {
+      event.stopPropagation();
+      show(button.dataset.go);
+    });
+  });
+
+  device.querySelectorAll('[data-back]').forEach((button) => {
+    button.addEventListener('click', () => show(history.pop() || 'w-hall', false));
+  });
+
+  device.querySelectorAll('[data-toast]').forEach((button) => {
+    button.addEventListener('click', () => note(button.dataset.toast));
+  });
+
+  device.querySelectorAll('.worker-filter').forEach((group) => {
+    group.querySelectorAll('button').forEach((button) => {
+      button.addEventListener('click', () => {
+        group.querySelectorAll('button').forEach((item) => item.classList.remove('active'));
+        button.classList.add('active');
+        if (button.dataset.mode) note(`已切换为${button.dataset.mode}`);
+      });
+    });
+  });
+
+  const workSwitch = document.querySelector('.work-switch');
+  workSwitch.addEventListener('click', () => {
+    workSwitch.classList.toggle('off');
+    const resting = workSwitch.classList.contains('off');
+    document.querySelector('.status-text').textContent = resting ? '休息中' : '接单中';
+    document.querySelector('.work-status-copy small').textContent = resting ? '休息期间将暂停匹配新订单' : '系统正在匹配附近优质订单';
+    document.querySelector('.online-dot').style.background = resting ? '#91a1ab' : '#43d89a';
+    note(resting ? '已暂停接单' : '已恢复接单');
+  });
+
+  device.querySelectorAll('[data-mini-switch]').forEach((button) => {
+    button.addEventListener('click', (event) => {
+      event.stopPropagation();
+      button.classList.toggle('active');
+      note(button.classList.contains('active') ? '设置已开启' : '设置已关闭');
+    });
+  });
+
+  const updateJobDetail = (button) => {
+    const name = button.dataset.job || '深度保洁';
+    const price = button.dataset.price || '¥218';
+    const time = button.dataset.time || '今天 14:00–17:00';
+    const address = button.dataset.address || '西湖区文三路188号';
+    document.querySelector('.detail-job-name').textContent = name;
+    document.querySelectorAll('.detail-job-price').forEach((item) => {
+      item.textContent = item.closest('.total') ? `${price}.00`.replace('.00.00', '.00') : price;
+    });
+    document.querySelector('.detail-job-time').textContent = time;
+    document.querySelector('.detail-job-address').textContent = address;
+    show('w-job-detail');
+  };
+
+  device.querySelectorAll('[data-job]').forEach((button) => {
+    button.addEventListener('click', (event) => {
+      event.stopPropagation();
+      updateJobDetail(button);
+    });
+  });
+
+  device.querySelectorAll('[data-accept]').forEach((button) => {
+    button.addEventListener('click', () => {
+      if (button.classList.contains('done')) return;
+      button.textContent = '已接单';
+      button.classList.add('done');
+      note('抢单成功，请准时上门');
+    });
+  });
+
+  document.querySelector('[data-detail-accept]').addEventListener('click', (event) => {
+    const button = event.currentTarget;
+    button.textContent = '已确认接单';
+    button.disabled = true;
+    button.style.background = '#168b64';
+    document.querySelector('.job-detail-status strong').textContent = '订单已确认，等待上门服务';
+    document.querySelector('.job-detail-status p').textContent = '请提前15分钟联系客户并准时到达';
+    note('接单成功，订单已加入待服务');
+  });
+
+  device.querySelectorAll('[data-progress]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const steps = {
+        '到达签到': ['开始服务', '到达签到成功'],
+        '开始服务': ['完成服务', '服务已开始'],
+        '完成服务': ['已完成', '服务完成，佣金将在24小时内入账']
+      };
+      const next = steps[button.textContent];
+      if (!next) return;
+      button.textContent = next[0];
+      if (next[0] === '已完成') {
+        button.disabled = true;
+        button.style.background = '#168b64';
+      }
+      note(next[1]);
+    });
+  });
+
+  const withdrawInput = document.querySelector('.withdraw-input');
+  device.querySelectorAll('[data-amount]').forEach((button) => {
+    button.addEventListener('click', () => {
+      device.querySelectorAll('[data-amount]').forEach((item) => item.classList.remove('active'));
+      button.classList.add('active');
+      withdrawInput.value = button.dataset.amount;
+    });
+  });
+
+  document.querySelector('[data-withdraw-all]').addEventListener('click', () => {
+    withdrawInput.value = '6280.00';
+    device.querySelectorAll('[data-amount]').forEach((item) => item.classList.remove('active'));
+  });
+
+  document.querySelector('[data-withdraw-submit]').addEventListener('click', () => {
+    const amount = Number(withdrawInput.value);
+    if (!amount || amount < 10) {
+      note('请输入不低于10元的提现金额');
+      return;
+    }
+    if (amount > 6280) {
+      note('提现金额不能超过可用余额');
+      return;
+    }
+    note(`提现申请已提交：¥${amount.toFixed(2)}`);
+    setTimeout(() => show('w-withdraw-records'), 700);
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const initialView = window.location.hash.slice(1);
+  if (!initialView) return;
+  document.querySelector(`[data-nav="${initialView}"]`)?.click();
+});
+
+</script>
+</body>
+</html>

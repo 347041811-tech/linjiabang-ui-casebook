@@ -1,0 +1,1827 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>邻家帮｜用户端</title><style>
+:root{--b:#1269e8;--n:#10273b;--i:#122235;--m:#71808f;--l:#e1e8ee;--s:#f4f7f9;--g:#16a36a}*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans SC",sans-serif;color:var(--i);background:#e9eef2}button,input,select{font:inherit}button{cursor:pointer}svg{width:20px;height:20px}.back{position:fixed;left:20px;top:18px;z-index:30;display:flex;gap:7px;align-items:center;background:#fff;padding:10px 14px;color:#536576;text-decoration:none;font-size:12px;box-shadow:0 5px 20px #1020301a;border-radius:4px}.back svg{width:15px}.phone-page{min-height:100vh;display:grid;place-items:center;padding:25px}.device{width:390px;height:844px;background:#f6f8fa;border:9px solid #172331;border-radius:38px;box-shadow:0 30px 80px #10233440;position:relative;overflow:hidden}.scroll{height:calc(100% - 68px);overflow:auto;scrollbar-width:none}.scroll::-webkit-scrollbar{display:none}.app-head{padding:34px 20px 18px;background:#fff}.top,.title,.job-top,.job-foot{display:flex;align-items:center;justify-content:space-between}.top strong{font-size:18px}.place{font-size:10px;color:#718391;display:flex;gap:3px;align-items:center;margin-top:4px}.place svg{width:12px}.actions{display:flex;gap:14px}.actions svg{width:18px}.hero-card{height:126px;margin-top:18px;padding:20px;color:#fff;background:linear-gradient(120deg,#145bbf,#168be4);border-radius:6px;position:relative;overflow:hidden}.hero-card:after{content:"";position:absolute;right:-50px;top:-60px;width:160px;height:160px;border:28px solid #ffffff14;border-radius:50%}.hero-card small{font-size:9px;opacity:.8}.hero-card h1{font-size:22px;line-height:1.3;margin:7px 0 13px}.hero-card button{border:0;background:#fff;color:var(--b);padding:7px 12px;font-size:9px;font-weight:bold}.section{background:#fff;padding:18px 20px;margin-top:9px}.title{margin-bottom:15px}.title strong{font-size:14px}.title button{border:0;background:none;color:#7a8b99;font-size:9px}.services{display:grid;grid-template-columns:repeat(4,1fr);gap:17px 7px}.service{text-align:center;font-size:9px}.service i{display:grid;place-items:center;width:47px;height:47px;margin:0 auto 7px;background:#e8f3ff;color:var(--b);border-radius:5px}.service:nth-child(2n) i{background:#eaf8f3;color:#17966b}.service:nth-child(3n) i{background:#fff2e7;color:#e77b25}.coupon{background:#eef5ff;border-left:3px solid var(--b);padding:12px;display:flex;align-items:center}.coupon b{font-size:17px;color:var(--b);margin-right:11px}.coupon span{font-size:9px;color:#657686;flex:1}.coupon button{background:#fff;border:1px solid var(--b);color:var(--b);padding:5px 8px;font-size:8px}.master{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--l)}.avatar{width:42px;height:42px;border-radius:50%;background:#dce6ed;display:grid;place-items:center;font-weight:bold}.master div{flex:1}.master b{display:block;font-size:11px}.master small{font-size:8px;color:#7b8c99}.master em{font-size:8px;color:var(--b);font-style:normal}.nav{position:absolute;bottom:0;left:0;right:0;height:68px;background:#fff;border-top:1px solid var(--l);display:grid;grid-template-columns:repeat(4,1fr);z-index:6}.nav button{border:0;background:none;color:#91a0ad;font-size:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}.nav button.active{color:var(--b)}.nav svg{width:19px}.view{display:none}.view.active{display:block}.worker .app-head{background:var(--n);color:#fff}.status{display:flex;justify-content:space-between;align-items:center;margin-top:22px}.status>div{display:flex;align-items:center;gap:9px}.dot{width:8px;height:8px;background:#38d68e;border-radius:50%;box-shadow:0 0 0 4px #38d68e22}.switch{width:44px;height:24px;border:0;border-radius:12px;background:#29956e;padding:3px}.switch:after{content:"";display:block;width:18px;height:18px;border-radius:50%;background:#fff;margin-left:20px;transition:.2s}.switch.off{background:#71808d}.switch.off:after{margin-left:0}.earning{display:grid;grid-template-columns:1fr 1fr;background:#ffffff12;padding:16px;margin-top:18px}.earning div+div{border-left:1px solid #ffffff20;padding-left:18px}.earning span{font-size:8px;color:#a9bbc9}.earning strong{display:block;font-size:20px;margin-top:7px}.filters{display:flex;gap:7px;overflow:auto;margin-bottom:14px}.filters button{border:0;background:#edf2f5;color:#718290;padding:7px 11px;font-size:9px;white-space:nowrap}.filters button.active{background:var(--b);color:#fff}.job{border:1px solid var(--l);padding:14px;margin-bottom:10px;border-radius:4px}.job-top b{font-size:12px}.job-top span{font-size:9px;color:#ef8129}.job p{font-size:9px;color:#748594;display:flex;gap:5px}.job p svg{width:12px}.job-foot{border-top:1px dashed var(--l);padding-top:10px}.job-foot strong{color:var(--b);font-size:16px}.job-foot button{border:0;background:var(--b);color:#fff;padding:8px 13px;font-size:9px}.job-foot button.done{background:var(--g)}.toast{position:absolute;bottom:85px;left:50%;transform:translate(-50%,15px);background:var(--n);color:#fff;padding:10px 16px;font-size:10px;opacity:0;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}
+.admin{background:#eef2f5}.shell{display:grid;grid-template-columns:225px 1fr;min-height:100vh}.side{background:var(--n);color:#fff;padding:24px 15px;position:relative}.brand{font-weight:bold;display:flex;align-items:center;gap:10px;padding:0 8px 24px}.brand i{width:33px;height:33px;background:var(--b);display:grid;place-items:center}.menu{display:grid;gap:5px}.menu button{border:0;background:none;color:#90a5b7;display:flex;gap:11px;padding:12px;align-items:center;text-align:left;font-size:12px}.menu button.active,.menu button:hover{background:#1a3b58;color:#fff}.menu svg{width:17px}.main{min-width:0}.topbar{height:70px;background:#fff;border-bottom:1px solid var(--l);display:flex;align-items:center;justify-content:space-between;padding:0 28px}.topbar h1{font-size:18px}.content{padding:25px 28px}.admin-view{display:none}.admin-view.active{display:block}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.metric,.panel{background:#fff;border:1px solid var(--l);padding:20px}.metric span{font-size:10px;color:var(--m)}.metric strong{display:block;font-size:25px;margin:10px 0}.metric small{color:var(--g);font-size:9px}.charts{display:grid;grid-template-columns:1.6fr 1fr;gap:13px;margin-top:13px}.bars{height:245px;display:flex;align-items:end;gap:20px;border-bottom:1px solid var(--l);padding:28px 10px 18px}.bars span{flex:1;background:linear-gradient(#4fa5ff,var(--b))}.rank div{font-size:10px;margin-top:25px}.rank b{float:right}.rank i{height:5px;background:#e9eef2;display:block;margin-top:7px}.rank i:after{content:"";display:block;height:100%;width:var(--w);background:var(--b)}.toolbar{display:flex;justify-content:space-between;margin-bottom:13px}.toolbar div{display:flex;gap:7px}.toolbar button{border:1px solid var(--l);background:#fff;padding:9px 12px;font-size:10px}.toolbar .active,.toolbar .primary{background:var(--b);color:#fff;border-color:var(--b)}.table-wrap{overflow:auto}.data{width:100%;min-width:780px;border-collapse:collapse;background:#fff;font-size:10px}.data th,.data td{padding:14px;border-bottom:1px solid var(--l);text-align:left}.data th{background:#f7f9fa;color:#748594}.tag{padding:4px 7px;background:#fff1e6;color:#db721a}.tag.green{background:#e9f8f2;color:#158b60}.assign{border:0;background:none;color:var(--b)}.drawer{position:fixed;right:-370px;top:0;width:370px;height:100vh;background:#fff;padding:28px;box-shadow:-10px 0 40px #1020302b;transition:.25s;z-index:20}.drawer.open{right:0}.drawer-close{float:right;border:0;background:none}.drawer h2{margin:35px 0 25px}.drawer label{display:block;font-size:10px;margin:16px 0}.drawer select{width:100%;padding:11px;border:1px solid var(--l);margin-top:7px}.confirm{width:100%;border:0;background:var(--b);color:#fff;padding:12px;margin-top:18px}
+@media(max-width:800px){.phone-page{padding:0;background:#fff}.device{width:100%;height:100vh;border:0;border-radius:0}.back{display:none}.app-head{padding-top:22px}.shell{grid-template-columns:62px 1fr}.side{padding:18px 7px}.brand span,.menu span{display:none}.menu button{justify-content:center}.content{padding:16px 12px}.metrics{grid-template-columns:repeat(2,1fr)}.charts{grid-template-columns:1fr}.topbar{padding:0 14px}.drawer{width:min(370px,100%)}}
+
+</style><style>
+button{border:0}.plain,.actions button{background:none;padding:0}.actions button{position:relative}.badge{position:absolute;right:-5px;top:-5px;background:#ef4d4d;color:#fff;border-radius:8px;min-width:14px;height:14px;display:grid;place-items:center;font-size:8px}.service{border:0;background:none;padding:0;color:inherit}.master-btn{width:100%;background:none;text-align:left}.page-head{height:70px;background:#fff;display:grid;grid-template-columns:42px 1fr 42px;align-items:end;padding:0 14px 15px;border-bottom:1px solid var(--l);position:sticky;top:0;z-index:4}.page-head h2{font-size:16px;text-align:center;margin:0}.page-head>button{background:none;padding:0;color:var(--i);display:grid;place-items:center;font-size:10px}.page-head>span{width:42px}.flush{margin-top:0}.big{margin-bottom:12px}.job-btn{display:block;width:100%;background:#fff;text-align:left;color:inherit}.job-foot em{font-size:9px;color:var(--b);font-style:normal}.menu-list{margin-top:16px;border-top:1px solid var(--l)}.menu-list button{width:100%;height:49px;background:#fff;border-bottom:1px solid var(--l);display:flex;align-items:center;gap:11px;font-size:11px;text-align:left}.menu-list button svg{width:17px;color:var(--b)}.menu-list button span{margin-left:auto;color:#8393a0;font-size:9px}.searchbox{background:var(--s);padding:11px 13px;color:#8796a2;font-size:10px;display:flex;align-items:center;gap:8px}.searchbox svg{width:15px}.service-list{margin-top:16px}.service-list button{width:100%;display:flex;align-items:center;gap:12px;background:#fff;border-bottom:1px solid var(--l);padding:15px 4px;text-align:left}.service-list>button>svg{width:23px;color:var(--b)}.service-list span{flex:1}.service-list b,.service-list small{display:block}.service-list b{font-size:12px}.service-list small{font-size:8px;color:#80909d;margin-top:5px}.service-list em{font-size:10px;color:var(--b);font-style:normal}.detail{min-height:100%;background:#f6f8fa;padding-bottom:70px}.detail-cover{height:195px;background:linear-gradient(135deg,#1b5fae,#35a7e8);display:grid;place-items:center;color:#fff}.detail-cover svg{width:62px;height:62px}.detail-cover small{margin-top:-55px}.service-copy{padding-top:20px}.price{display:flex;justify-content:space-between;align-items:end}.price h2{margin:0 0 5px;font-size:19px}.price span{font-size:8px;color:var(--m)}.price>strong{font-size:22px;color:var(--b)}.price strong small{font-size:8px}.service-copy h3,.section h3{font-size:13px;margin:25px 0 13px}.service-copy>p{font-size:10px;color:#657786;line-height:1.8}.promise{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.promise span,.certs span{background:#edf5ff;color:#376992;padding:10px 4px;font-size:8px;text-align:center}.promise svg,.certs svg{display:block;margin:0 auto 5px;width:17px}.sticky-action{position:absolute;bottom:68px;left:0;right:0;height:62px;background:#fff;border-top:1px solid var(--l);display:grid;grid-template-columns:1fr 2fr;gap:8px;padding:9px 15px;z-index:5}.sticky-action button{border:1px solid var(--b);background:#fff;color:var(--b);font-size:11px}.sticky-action .primary-action{background:var(--b);color:#fff}.form-page{padding:12px 18px}.form-page label{display:block;font-size:10px;color:var(--m);margin-bottom:12px}.form-page label>button,.form-page input{width:100%;min-height:48px;background:#fff;margin-top:7px;padding:11px 13px;display:flex;align-items:center;justify-content:space-between;color:var(--i);font-size:11px;border:1px solid var(--l);text-align:left}.form-page textarea{width:100%;height:82px;border:1px solid var(--l);margin-top:7px;padding:11px;font:inherit;font-size:10px;resize:none}.form-page label span{color:#8998a4;font-size:9px}.pay-box{background:#fff;padding:15px;display:flex;justify-content:space-between;font-size:11px}.pay-box strong{font-size:18px;color:var(--b)}.submit-booking{width:100%;height:46px;background:var(--b);color:#fff;margin-top:16px;font-size:12px}.order-status{padding:28px 20px;background:var(--n);color:#fff;display:flex;gap:14px;align-items:center}.order-status>svg{color:#65b4ff}.order-status b,.order-status small{display:block}.order-status b{font-size:14px}.order-status small{font-size:9px;color:#a8bdcd;margin-top:6px}.timeline{display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px solid var(--l)}.timeline span{font-size:8px;color:#9aa7b1;text-align:center;position:relative}.timeline span:before{content:"";display:block;width:8px;height:8px;border-radius:50%;background:#ced7de;margin:0 auto 6px}.timeline .done:before,.timeline .active:before{background:var(--b)}.timeline .active{color:var(--b);font-weight:bold}.timeline small{display:block;margin-top:4px}.info-list p{display:flex;justify-content:space-between;font-size:10px;padding:7px 0}.info-list span{color:var(--m)}.worker-profile{text-align:center;padding:28px 20px;background:#fff}.avatar.large{width:65px;height:65px;margin:auto;font-size:20px}.worker-profile h2{font-size:18px;margin:12px 0 5px}.worker-profile p{font-size:9px;color:var(--m)}.worker-profile>div{display:grid;grid-template-columns:repeat(3,1fr);margin-top:22px}.worker-profile b{font-size:14px;border-right:1px solid var(--l)}.worker-profile b:last-child{border:0}.worker-profile small{display:block;color:var(--m);font-size:8px;margin-top:4px}.certs{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.review{background:var(--s);padding:13px;font-size:10px;line-height:1.7}.review small{display:block;color:var(--m);margin-top:6px}.locate-now{width:100%;display:flex;gap:12px;align-items:center;background:#edf5ff;color:var(--b);padding:15px;text-align:left}.locate-now span{display:flex;flex-direction:column}.locate-now small{color:var(--m);margin-top:4px}.city-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.city-grid button{background:var(--s);padding:12px;font-size:10px}.address-card{display:block;width:100%;background:#fff;padding:17px 5px;border-bottom:1px solid var(--l);text-align:left;position:relative}.address-card b,.address-card span{display:block}.address-card b{font-size:11px}.address-card span{font-size:9px;color:var(--m);margin-top:7px}.address-card em{position:absolute;right:5px;top:16px;color:var(--b);font-size:8px;font-style:normal}.service-center{text-align:center;padding:32px 20px;background:#fff}.service-center>svg{width:46px;height:46px;color:var(--b)}.service-center h2{font-size:17px;margin-bottom:5px}.service-center p{font-size:9px;color:var(--m)}.service-center button{display:block;width:100%;padding:11px;margin-top:9px;background:var(--b);color:#fff;font-size:10px}.service-center button+button{background:#fff;color:var(--b);border:1px solid var(--b)}.message{display:flex;gap:12px;padding:16px 0;border-bottom:1px solid var(--l)}.message>svg{color:var(--b)}.message b{font-size:11px}.message p,.message small{font-size:9px;color:var(--m)}.sheet{display:none;position:absolute;z-index:20;inset:0;background:#10203066;align-items:end}.sheet.open{display:flex}.sheet>div{width:100%;background:#fff;padding:20px}.sheet b{display:block;margin-bottom:12px}.sheet button{display:block;width:100%;padding:13px;background:#fff;border-top:1px solid var(--l);font-size:11px}.user-toast{white-space:nowrap;z-index:25}.detail.active~.nav{display:none}@media(max-width:800px){.sticky-action{bottom:0}.detail{padding-bottom:62px}}
+
+</style><style>
+.nav.is-hidden{display:none}.nav button span{display:block;line-height:1}.root-view{padding-bottom:8px}.coupon-head{background:#f6f8fa}.coupon-overview{margin:10px 14px 0;background:linear-gradient(125deg,#155db9,#168be4);color:#fff;border-radius:7px;padding:19px;display:grid;grid-template-columns:1fr 1.2fr;gap:15px}.coupon-overview>div{border-right:1px solid #ffffff2b}.coupon-overview small{display:block;font-size:8px;color:#cce3ff}.coupon-overview strong{display:block;font-size:28px;margin-top:7px}.coupon-overview strong em{font-size:9px;font-style:normal;font-weight:normal}.coupon-overview button{background:none;color:#fff;display:flex;align-items:center;text-align:left;gap:8px}.coupon-overview button>svg{width:20px}.coupon-overview button>svg:last-child{width:14px;margin-left:auto}.coupon-overview button span{font-size:10px}.coupon-overview button small{margin-top:4px}.coupon-tabs{background:#fff;padding:0 18px;margin:10px 0 0;height:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:0}.coupon-tabs button{background:#fff;padding:0;border-bottom:2px solid transparent}.coupon-tabs button.active{background:#fff;color:var(--b);border-bottom-color:var(--b)}.coupon-list{padding:14px}.voucher{min-height:116px;background:#fff;border-radius:6px;display:grid;grid-template-columns:85px 1fr 48px;align-items:center;margin-bottom:12px;overflow:hidden;box-shadow:0 3px 14px #18364f0b;position:relative}.voucher:before{content:"";position:absolute;left:82px;top:0;bottom:0;border-left:1px dashed #cdd9e3}.voucher-value{text-align:center;color:var(--b)}.voucher-value strong{display:block;font-size:28px}.voucher-value strong small{font-size:13px}.voucher-value span{font-size:8px;color:#7c8c98}.voucher-info{padding-left:14px}.voucher-info b{font-size:11px}.voucher-info p,.voucher-info small{font-size:8px;color:#7c8c98;margin:7px 0}.voucher>button{background:var(--b);color:#fff;border-radius:11px;padding:6px 3px;font-size:8px;margin-right:10px}.voucher.orange .voucher-value{color:#ef862c}.voucher.orange>button{background:#ef862c}.coupon-tip{display:flex;gap:10px;align-items:center;justify-content:center;color:#718390;padding:8px}.coupon-tip svg{width:18px;color:var(--g)}.coupon-tip b,.coupon-tip small{display:block;font-size:8px}.coupon-tip small{margin-top:3px}.me-page{background:#eef3f6}.me-head{background:linear-gradient(150deg,#102c47,#164c79);color:#fff;padding:28px 18px 44px;position:relative}.me-tools{display:flex;justify-content:flex-end;gap:15px}.me-tools button{background:none;color:#fff;position:relative}.me-profile{width:100%;background:none;color:#fff;display:flex;align-items:center;gap:12px;text-align:left;margin-top:12px}.me-profile .avatar{background:#d7e5f1;color:#2f5068;width:50px;height:50px}.me-profile>span:nth-child(2){flex:1}.me-profile b,.me-profile small{display:block}.me-profile b{font-size:17px}.me-profile small{font-size:8px;color:#bdd0df;margin-top:6px}.me-profile small svg{width:11px;vertical-align:middle}.me-profile>svg{width:17px}.member-card{position:absolute;left:18px;right:18px;bottom:-31px;height:66px;border-radius:6px;background:linear-gradient(110deg,#e9f2f7,#cbdfea);color:#15324a;padding:14px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 8px 22px #102c4720}.member-card small,.member-card b{display:block}.member-card small{font-size:8px;color:#587287}.member-card b{font-size:10px;margin-top:6px}.member-card button{background:#173e60;color:#fff;border-radius:3px;padding:7px 10px;font-size:8px}.me-content{padding:43px 12px 16px}.me-panel{background:#fff;border-radius:6px;padding:16px;margin-bottom:10px}.panel-title{display:flex;justify-content:space-between;align-items:center}.panel-title b{font-size:12px}.panel-title button{background:none;color:#8796a1;font-size:8px;display:flex;align-items:center}.panel-title button svg{width:13px}.order-shortcuts{display:grid;grid-template-columns:repeat(5,1fr);margin-top:18px}.order-shortcuts button{background:none;position:relative;font-size:8px;color:#526878}.order-shortcuts svg{display:block;margin:0 auto 7px;color:#295c85;width:21px}.order-shortcuts b{position:absolute;top:-6px;right:9px;background:#ef5e4b;color:#fff;border-radius:8px;min-width:14px;height:14px;font-size:7px;display:grid;place-items:center}.asset-row{background:#fff;border-radius:6px;display:grid;grid-template-columns:repeat(3,1fr);margin-bottom:10px;padding:13px}.asset-row button{background:none;border-right:1px solid var(--l)}.asset-row button:last-child{border:0}.asset-row strong,.asset-row span{display:block}.asset-row strong{font-size:15px;color:#153d60}.asset-row span{font-size:8px;color:#7a8c99;margin-top:5px}.tool-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:19px 6px;margin-top:18px}.tool-grid button{background:none;font-size:8px;color:#4f6575}.tool-grid svg{display:grid;margin:0 auto 7px;width:21px;color:var(--b)}.service-number{text-align:center;font-size:8px;color:#8b99a4;margin:18px 0 2px}
+.orders-page{background:#eef3f6}.orders-head{background:#f7fafc}.orders-content{padding:10px 12px 18px}.order-overview{min-height:116px;background:linear-gradient(135deg,#12314f,#176eac);color:#fff;border-radius:7px;padding:17px;display:grid;grid-template-columns:1fr 128px;gap:14px;align-items:center;box-shadow:0 10px 24px #12314f1f}.order-overview small,.order-overview span,.order-overview button small{display:block;color:#c6d9e8;font-size:8px}.order-overview strong{display:block;font-size:31px;margin:8px 0 6px;line-height:1}.order-overview strong em{font-size:10px;font-style:normal;font-weight:normal}.order-overview button{min-width:0;background:#ffffff14;color:#fff;border:1px solid #ffffff25;border-radius:6px;padding:11px 9px;display:grid;grid-template-columns:22px 1fr 13px;gap:7px;align-items:center;text-align:left}.order-overview button span{min-width:0;font-size:10px}.order-overview button svg{width:18px}.order-overview button svg:last-child{width:13px;color:#c6d9e8}.order-state-grid{background:#fff;border-radius:7px;margin-top:10px;padding:13px 8px;display:grid;grid-template-columns:repeat(5,1fr);gap:4px;box-shadow:0 3px 14px #18364f0a}.order-state-grid button{height:58px;background:#fff;color:#566b7a;position:relative;border-radius:6px;font-size:8px;display:grid;grid-template-rows:22px 14px;place-items:center;align-content:center}.order-state-grid button.active{background:#edf6ff;color:var(--b)}.order-state-grid svg{width:20px;height:20px}.order-state-grid b{position:absolute;right:8px;top:6px;min-width:14px;height:14px;border-radius:7px;background:#ef654d;color:#fff;font-size:7px;display:grid;place-items:center}.order-tabs{height:38px;margin:11px 0 10px;display:flex;gap:7px;overflow:auto}.order-tabs button{height:32px;border-radius:16px;background:#fff;color:#6f8190;padding:0 12px;font-size:9px;white-space:nowrap}.order-tabs button.active{background:#183b59;color:#fff}.order-list{display:grid;gap:10px}.order-card{background:#fff;border-radius:7px;padding:14px;box-shadow:0 3px 14px #18364f0b}.primary-order{border:1px solid #cde4f7}.muted-order{opacity:.94}.order-card-head,.order-card-foot,.order-worker{display:flex;align-items:center;justify-content:space-between;gap:10px}.order-card-head span{font-size:8px;color:#8998a4}.status-pill{font-size:8px;padding:5px 8px;border-radius:12px;background:#edf2f5;color:#6d7f8b;white-space:nowrap}.status-pill.running{background:#eaf5ff;color:#1269e8}.status-pill.waiting{background:#fff4e8;color:#e57b23}.status-pill.done{background:#ebf8f1;color:#159764}.order-main{display:flex;gap:11px;align-items:flex-start;margin-top:13px}.order-main>svg{width:35px;height:35px;color:var(--b);background:#eaf4ff;border-radius:6px;padding:8px;flex:0 0 35px}.order-main div{min-width:0}.order-main b{font-size:12px;line-height:1.4}.order-main p{font-size:8px;color:#778895;margin:5px 0 0;line-height:1.5}.order-meta{display:grid;gap:6px;margin-top:12px;background:#f6f9fb;padding:10px;border-radius:6px}.order-meta p{margin:0;color:#657584;font-size:9px;display:flex;gap:6px;align-items:flex-start;line-height:1.45}.order-meta svg{width:13px;height:13px;color:#8ba0ae;flex:0 0 13px}.order-worker{margin-top:12px;padding-top:12px;border-top:1px solid var(--l)}.order-worker .avatar{width:34px;height:34px;background:#dfeaf2;color:#24465f;font-size:12px;flex:0 0 34px}.order-worker div{flex:1;min-width:0}.order-worker b,.order-worker small{display:block}.order-worker b{font-size:10px}.order-worker small{font-size:8px;color:#7c8d99;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.order-worker button{width:32px;height:32px;border-radius:50%;background:#edf6ff;color:var(--b);display:grid;place-items:center;flex:0 0 32px}.order-worker button svg{width:15px}.order-progress{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:14px 3px 3px;position:relative}.order-progress:before{content:"";position:absolute;left:12.5%;right:12.5%;top:5px;height:1px;background:#d8e1e8}.order-progress span{position:relative;z-index:1;text-align:center;color:#93a1ad;font-size:8px}.order-progress span:before{content:"";display:block;width:10px;height:10px;margin:0 auto 6px;border-radius:50%;background:#d4dde5}.order-progress .done:before,.order-progress .active:before{background:var(--b)}.order-progress .active{color:var(--b);font-weight:bold}.order-card-foot{border-top:1px dashed var(--l);margin-top:13px;padding-top:12px}.order-card-foot strong{color:var(--b);font-size:17px;white-space:nowrap}.order-card-foot div{display:flex;gap:7px}.order-card-foot button{min-width:62px;height:30px;padding:0 10px;border:1px solid #d8e2ea;border-radius:3px;background:#fff;color:#53697a;font-size:9px;white-space:nowrap}.order-card-foot .primary-action{border-color:var(--b);background:var(--b);color:#fff}
+
+.hero-card {
+  height: auto;
+  min-height: 164px;
+  padding: 20px 20px 18px;
+}
+
+.hero-card h1 {
+  margin: 8px 0 14px;
+}
+
+.hero-card > button {
+  position: relative;
+  z-index: 2;
+  min-width: 86px;
+  min-height: 30px;
+  white-space: nowrap;
+}
+
+.order-shortcuts button {
+  min-width: 0;
+  min-height: 48px;
+  display: grid;
+  grid-template-rows: 25px 14px;
+  place-items: center;
+  align-content: center;
+}
+
+.order-shortcuts button > svg {
+  width: 21px;
+  height: 21px;
+  margin: 0;
+}
+
+.order-shortcuts button > span {
+  line-height: 14px;
+  white-space: nowrap;
+}
+
+.detail-cover {
+  position: relative;
+  height: 220px;
+  padding: 22px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  background-image: linear-gradient(90deg, rgba(11, 35, 56, .78), rgba(11, 35, 56, .12)), url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=88");
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+}
+
+.detail-cover::after {
+  content: "平台认证 · 品质保障";
+  position: absolute;
+  right: 18px;
+  bottom: 20px;
+  padding: 6px 9px;
+  border: 1px solid rgba(255, 255, 255, .48);
+  color: #fff;
+  font-size: 8px;
+  background: rgba(10, 35, 55, .28);
+  backdrop-filter: blur(6px);
+}
+
+.detail-cover > svg {
+  display: none;
+}
+
+.detail-cover > small {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, .35);
+}
+
+.home-redesign {
+  background: #eef3f6;
+  padding-bottom: 10px;
+}
+
+.home-redesign .app-head {
+  padding: 30px 18px 15px;
+  background: linear-gradient(180deg, #f8fbfd 0%, #edf4f8 100%);
+}
+
+.home-top .actions button {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #fff;
+  color: #173e60;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 5px 16px rgba(22, 58, 89, .08);
+}
+
+.home-search {
+  width: 100%;
+  height: 38px;
+  margin-top: 17px;
+  padding: 0 13px;
+  border-radius: 6px;
+  background: #fff;
+  color: #7a8b99;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+  box-shadow: 0 5px 18px rgba(20, 54, 84, .07);
+}
+
+.home-search svg {
+  width: 16px;
+  color: var(--b);
+}
+
+.home-search span {
+  font-size: 10px;
+}
+
+.home-hero {
+  min-height: 196px;
+  margin-top: 13px;
+  padding: 21px 18px 15px;
+  background-image: linear-gradient(90deg, rgba(13, 38, 61, .88), rgba(18, 88, 146, .56), rgba(18, 88, 146, .12)), url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=88");
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 13px 28px rgba(18, 65, 106, .22);
+}
+
+.home-hero::after {
+  display: none;
+}
+
+.home-hero small {
+  display: inline-flex;
+  padding: 5px 8px;
+  border: 1px solid rgba(255, 255, 255, .34);
+  background: rgba(255, 255, 255, .13);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  font-size: 8px;
+  opacity: 1;
+}
+
+.home-hero h1 {
+  max-width: 230px;
+  margin: 12px 0 13px;
+  font-size: 24px;
+  line-height: 1.28;
+  letter-spacing: 0;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-actions button {
+  min-width: 78px;
+  height: 31px;
+  padding: 0 12px;
+  border-radius: 3px;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.hero-actions button:first-child {
+  background: #fff;
+  color: var(--b);
+  font-weight: 700;
+}
+
+.hero-actions button:last-child {
+  border: 1px solid rgba(255, 255, 255, .5);
+  background: rgba(255, 255, 255, .13);
+  color: #fff;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-top: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-stats span {
+  min-width: 0;
+  padding: 8px 6px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, .14);
+  color: rgba(255, 255, 255, .78);
+  font-size: 8px;
+  text-align: center;
+}
+
+.hero-stats b {
+  display: block;
+  margin-bottom: 3px;
+  color: #fff;
+  font-size: 13px;
+}
+
+.home-benefits {
+  margin-top: 11px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+}
+
+.home-benefits span {
+  height: 34px;
+  background: #fff;
+  border-radius: 6px;
+  color: #31556d;
+  font-size: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  box-shadow: 0 4px 15px rgba(20, 54, 84, .06);
+}
+
+.home-benefits svg {
+  width: 14px;
+  height: 14px;
+  color: var(--b);
+}
+
+.home-section {
+  margin: 9px 12px 0;
+  padding: 16px 14px;
+  border-radius: 7px;
+  box-shadow: 0 4px 16px rgba(24, 54, 79, .06);
+}
+
+.home-section .title {
+  margin-bottom: 13px;
+}
+
+.home-section .title strong {
+  font-size: 13px;
+}
+
+.home-section .title button {
+  font-size: 8px;
+}
+
+.service-panel .services {
+  gap: 10px 8px;
+}
+
+.service-panel .service {
+  min-width: 0;
+  min-height: 82px;
+  padding: 8px 2px 7px;
+  border-radius: 7px;
+  background: #f8fbfd;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  color: #20384b;
+}
+
+.service-panel .service i {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 6px;
+  border-radius: 9px;
+}
+
+.service-panel .service svg {
+  width: 19px;
+  height: 19px;
+}
+
+.service-panel .service b,
+.service-panel .service small {
+  display: block;
+  max-width: 100%;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.service-panel .service b {
+  font-size: 9px;
+}
+
+.service-panel .service small {
+  margin-top: 4px;
+  color: #7c8b98;
+  font-size: 7px;
+}
+
+.promo-panel {
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  gap: 9px;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.home-coupon {
+  min-height: 94px;
+  border: 0;
+  border-radius: 7px;
+  padding: 13px;
+  background: linear-gradient(135deg, #f2f7ff, #e4f0ff);
+  box-shadow: 0 4px 16px rgba(24, 54, 79, .07);
+}
+
+.home-coupon b {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.home-coupon span {
+  font-size: 8px;
+  line-height: 1.55;
+}
+
+.home-coupon button {
+  flex: 0 0 auto;
+  height: 26px;
+  border-radius: 13px;
+  padding: 0 9px;
+  font-size: 8px;
+  white-space: nowrap;
+}
+
+.dispatch-card {
+  min-height: 94px;
+  padding: 13px 11px;
+  border-radius: 7px;
+  background: linear-gradient(135deg, #173a59, #1c6b9f);
+  color: #fff;
+  display: grid;
+  grid-template-columns: 24px 1fr 12px;
+  gap: 8px;
+  align-items: center;
+  text-align: left;
+  box-shadow: 0 8px 22px rgba(18, 63, 100, .18);
+}
+
+.dispatch-card svg {
+  width: 20px;
+}
+
+.dispatch-card svg:last-child {
+  width: 12px;
+  color: #c8dcea;
+}
+
+.dispatch-card b,
+.dispatch-card small {
+  display: block;
+}
+
+.dispatch-card b {
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.dispatch-card small {
+  margin-top: 5px;
+  color: #c8dcea;
+  font-size: 8px;
+  line-height: 1.45;
+}
+
+.featured-master {
+  min-height: 72px;
+  margin-top: 9px;
+  padding: 12px;
+  border: 1px solid #e6edf2;
+  border-radius: 7px;
+  background: #f9fbfc;
+}
+
+.featured-master:first-of-type {
+  margin-top: 0;
+}
+
+.featured-master .avatar {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #dcebf6, #c8ddea);
+  color: #244b66;
+}
+
+.featured-master div {
+  min-width: 0;
+}
+
+.featured-master b {
+  font-size: 11px;
+}
+
+.featured-master small {
+  display: block;
+  margin-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.featured-master p {
+  display: flex;
+  gap: 6px;
+  margin: 8px 0 0;
+}
+
+.featured-master em {
+  padding: 4px 6px;
+  border-radius: 10px;
+  background: #edf6ff;
+  color: var(--b);
+  font-size: 7px;
+}
+
+.featured-master > svg {
+  width: 14px;
+  color: #91a2af;
+  flex: 0 0 14px;
+}
+
+.home-premium {
+  min-height: 100%;
+  padding-bottom: 14px;
+  background: #edf3f6;
+}
+
+.premium-head {
+  padding: 28px 16px 0;
+  background: linear-gradient(180deg, #10273b 0%, #173f5f 56%, #edf3f6 56%);
+  color: #fff;
+}
+
+.premium-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.premium-top strong {
+  display: block;
+  font-size: 19px;
+  line-height: 1.1;
+}
+
+.premium-top .place {
+  color: #b9cedd;
+}
+
+.premium-top .actions button {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .1);
+  color: #fff;
+  display: grid;
+  place-items: center;
+}
+
+.premium-search {
+  width: 100%;
+  height: 38px;
+  margin-top: 17px;
+  padding: 0 6px 0 13px;
+  border-radius: 19px;
+  background: #fff;
+  color: #718391;
+  display: grid;
+  grid-template-columns: 18px 1fr 46px;
+  gap: 7px;
+  align-items: center;
+  text-align: left;
+  box-shadow: 0 10px 24px rgba(12, 36, 56, .18);
+}
+
+.premium-search svg {
+  width: 16px;
+  color: var(--b);
+}
+
+.premium-search span {
+  min-width: 0;
+  font-size: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.premium-search em {
+  height: 28px;
+  border-radius: 14px;
+  background: #1269e8;
+  color: #fff;
+  font-size: 8px;
+  font-style: normal;
+  display: grid;
+  place-items: center;
+}
+
+.premium-hero {
+  min-height: 208px;
+  margin-top: 14px;
+  padding: 20px 16px;
+  border-radius: 9px;
+  background-image: linear-gradient(90deg, rgba(10, 31, 49, .88), rgba(10, 31, 49, .56), rgba(10, 31, 49, .1)), url("https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1200&q=88");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 92px;
+  gap: 12px;
+  overflow: hidden;
+  box-shadow: 0 16px 34px rgba(13, 43, 68, .28);
+}
+
+.premium-hero small {
+  display: inline-flex;
+  width: max-content;
+  max-width: 100%;
+  padding: 5px 8px;
+  border-radius: 13px;
+  background: rgba(255, 255, 255, .14);
+  color: #dcebf7;
+  font-size: 8px;
+}
+
+.premium-hero h1 {
+  margin: 13px 0 8px;
+  font-size: 25px;
+  line-height: 1.22;
+  letter-spacing: 0;
+}
+
+.premium-hero p {
+  max-width: 205px;
+  margin: 0;
+  color: #c8dceb;
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+.premium-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.premium-actions button {
+  min-width: 76px;
+  height: 31px;
+  border-radius: 4px;
+  padding: 0 10px;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.premium-actions button:first-child {
+  background: #fff;
+  color: #1269e8;
+  font-weight: 700;
+}
+
+.premium-actions button:last-child {
+  border: 1px solid rgba(255, 255, 255, .42);
+  background: rgba(255, 255, 255, .12);
+  color: #fff;
+}
+
+.hero-worker-card {
+  align-self: end;
+  min-width: 0;
+  padding: 12px 9px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .92);
+  color: #17324a;
+  text-align: center;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, .18);
+}
+
+.hero-worker-card .avatar {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 8px;
+  background: linear-gradient(135deg, #dbeaf5, #bcd2e1);
+  color: #24475f;
+}
+
+.hero-worker-card b,
+.hero-worker-card small,
+.hero-worker-card em {
+  display: block;
+}
+
+.hero-worker-card b {
+  font-size: 11px;
+}
+
+.hero-worker-card small {
+  margin-top: 4px;
+  color: #718391;
+  font-size: 7px;
+  line-height: 1.35;
+}
+
+.hero-worker-card em {
+  width: max-content;
+  margin: 8px auto 0;
+  padding: 4px 6px;
+  border-radius: 10px;
+  background: #ebf8f1;
+  color: #159764;
+  font-size: 7px;
+  font-style: normal;
+}
+
+.quick-panel {
+  margin-top: -18px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #fff;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  box-shadow: 0 12px 28px rgba(18, 48, 72, .15);
+  position: relative;
+  z-index: 2;
+}
+
+.quick-panel button {
+  min-width: 0;
+  min-height: 78px;
+  padding: 9px 6px;
+  border-radius: 7px;
+  background: #f6f9fb;
+  color: #183247;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.quick-panel i {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 7px;
+  border-radius: 50%;
+  background: #e9f3ff;
+  color: #1269e8;
+  display: grid;
+  place-items: center;
+}
+
+.quick-panel svg {
+  width: 15px;
+  height: 15px;
+}
+
+.quick-panel b,
+.quick-panel small {
+  display: block;
+}
+
+.quick-panel b {
+  font-size: 9px;
+}
+
+.quick-panel small {
+  margin-top: 4px;
+  color: #7a8b99;
+  font-size: 7px;
+  line-height: 1.35;
+}
+
+.premium-section {
+  margin: 10px 12px 0;
+  padding: 15px;
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(24, 54, 79, .07);
+}
+
+.premium-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 13px;
+}
+
+.premium-title small,
+.order-flow-card small {
+  display: block;
+  color: #81919d;
+  font-size: 8px;
+}
+
+.premium-title strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.premium-title button {
+  background: none;
+  color: #7a8b99;
+  font-size: 8px;
+  white-space: nowrap;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 1fr;
+  gap: 8px;
+}
+
+.showcase-grid button {
+  min-width: 0;
+  min-height: 78px;
+  padding: 10px 8px;
+  border-radius: 8px;
+  background: #f7fafc;
+  color: #183247;
+  text-align: left;
+  display: grid;
+  align-content: start;
+}
+
+.showcase-grid i {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  background: #e9f3ff;
+  color: #1269e8;
+  display: grid;
+  place-items: center;
+}
+
+.showcase-grid svg {
+  width: 16px;
+  height: 16px;
+}
+
+.showcase-grid b,
+.showcase-grid small,
+.showcase-grid strong {
+  display: block;
+}
+
+.showcase-grid b {
+  font-size: 10px;
+  line-height: 1.25;
+}
+
+.showcase-grid small {
+  margin-top: 5px;
+  color: #7c8c98;
+  font-size: 7px;
+  line-height: 1.35;
+}
+
+.showcase-grid strong {
+  margin-top: 13px;
+  color: #1269e8;
+  font-size: 12px;
+}
+
+.showcase-main {
+  grid-row: span 2;
+  min-height: 164px !important;
+  background: linear-gradient(160deg, #eef6ff, #dcecf8) !important;
+}
+
+.showcase-main i {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 13px;
+}
+
+.showcase-main b {
+  font-size: 13px;
+}
+
+.order-flow-card {
+  min-height: 102px;
+  background: linear-gradient(135deg, #15334f, #176ea5);
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 82px;
+  gap: 12px;
+  align-items: center;
+}
+
+.order-flow-card b,
+.order-flow-card span {
+  display: block;
+}
+
+.order-flow-card small {
+  color: #bcd3e5;
+}
+
+.order-flow-card b {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.order-flow-card span {
+  margin-top: 7px;
+  color: #c9dcea;
+  font-size: 8px;
+  line-height: 1.55;
+}
+
+.order-flow-card button {
+  height: 32px;
+  border-radius: 16px;
+  background: #fff;
+  color: #1269e8;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.worker-wide-card {
+  width: 100%;
+  min-height: 78px;
+  margin-top: 9px;
+  padding: 12px;
+  border: 1px solid #e5edf2;
+  border-radius: 8px;
+  background: #f9fbfc;
+  color: #183247;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-align: left;
+}
+
+.worker-wide-card .avatar {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  background: linear-gradient(135deg, #dceaf5, #c6dce8);
+  color: #284b65;
+}
+
+.worker-wide-card div {
+  flex: 1;
+  min-width: 0;
+}
+
+.worker-wide-card b,
+.worker-wide-card small {
+  display: block;
+}
+
+.worker-wide-card b {
+  font-size: 11px;
+}
+
+.worker-wide-card small {
+  margin-top: 5px;
+  color: #7b8d99;
+  font-size: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.worker-wide-card p {
+  margin: 8px 0 0;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.worker-wide-card em {
+  padding: 4px 6px;
+  border-radius: 10px;
+  background: #edf6ff;
+  color: #1269e8;
+  font-size: 7px;
+  font-style: normal;
+}
+
+.worker-wide-card > svg {
+  width: 14px;
+  color: #9aa9b4;
+  flex: 0 0 14px;
+}
+
+.quick-panel button > svg {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 7px;
+  padding: 7px;
+  border-radius: 50%;
+  background: #e9f3ff;
+  color: #1269e8;
+}
+
+.showcase-grid button > svg {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 8px;
+  padding: 7px;
+  border-radius: 8px;
+  background: #e9f3ff;
+  color: #1269e8;
+}
+
+.showcase-grid .showcase-main > svg {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 13px;
+  padding: 9px;
+}
+
+.service-pill-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 9px;
+}
+
+.service-pill-row button {
+  min-width: 0;
+  height: 34px;
+  border-radius: 17px;
+  background: #f2f7fb;
+  color: #365970;
+  font-size: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.service-pill-row svg {
+  width: 14px;
+  height: 14px;
+  color: #1269e8;
+}
+
+/* Light, breathable home page */
+.home-light {
+  min-height: 100%;
+  padding-bottom: 18px;
+  background: #f4f7f9;
+  color: #172b3a;
+}
+
+.light-head {
+  padding: 28px 18px 16px;
+  background: #fff;
+}
+
+.light-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.light-brand {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #176fd8, #20a083);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  flex: 0 0 38px;
+  box-shadow: 0 6px 14px rgba(23, 111, 216, .18);
+}
+
+.brand-mark svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.2;
+}
+
+.light-brand strong {
+  display: block;
+  font-size: 20px;
+  line-height: 1.1;
+  color: #142b3b;
+}
+
+.light-brand .place {
+  margin-top: 7px;
+  color: #728492;
+}
+
+.light-tools {
+  gap: 9px;
+}
+
+.light-tools button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f1f5f7;
+  color: #476171;
+  display: grid;
+  place-items: center;
+}
+
+.light-tools button:last-child {
+  background: #edf5ff;
+  color: #1670de;
+}
+
+.light-tools svg {
+  width: 17px;
+  height: 17px;
+}
+
+.light-search {
+  width: 100%;
+  height: 44px;
+  margin-top: 20px;
+  padding: 0 13px;
+  border: 1px solid #e4ebef;
+  border-radius: 8px;
+  background: #f7f9fa;
+  color: #8998a2;
+  display: grid;
+  grid-template-columns: 20px 1fr 18px;
+  gap: 9px;
+  align-items: center;
+  text-align: left;
+}
+
+.light-search svg {
+  width: 17px;
+  height: 17px;
+  color: #67808f;
+}
+
+.light-search span {
+  min-width: 0;
+  font-size: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.light-hero {
+  height: 142px;
+  min-height: 142px;
+  margin: 14px 14px 0;
+  border: 1px solid #dfeaf0;
+  border-radius: 8px;
+  background: linear-gradient(120deg, #f8fbff 0%, #eaf5ff 58%, #e8f7f2 100%);
+  display: grid;
+  grid-template-columns: 1.38fr .62fr;
+  overflow: hidden;
+  position: relative;
+}
+
+.light-hero-copy {
+  padding: 15px 0 14px 17px;
+  position: relative;
+  z-index: 2;
+}
+
+.light-hero-copy > small {
+  width: max-content;
+  max-width: 100%;
+  padding: 4px 7px;
+  border-radius: 4px;
+  background: #e4f1ff;
+  color: #176abd;
+  font-size: 7px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.light-hero-copy > small svg {
+  width: 11px;
+  height: 11px;
+}
+
+.light-hero h1 {
+  margin: 10px 0 6px;
+  color: #173e59;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.light-hero p {
+  max-width: 190px;
+  margin: 0;
+  color: #6d8290;
+  font-size: 8px;
+  line-height: 1.4;
+}
+
+.light-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 11px;
+}
+
+.light-hero-actions button {
+  height: 28px;
+  padding: 0 11px;
+  border-radius: 4px;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.light-hero-actions button:first-child {
+  background: #176fda;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 6px 14px rgba(23, 111, 218, .18);
+}
+
+.light-hero-actions button:last-child {
+  padding: 0 8px;
+  border: 1px solid #d6e5ed;
+  background: rgba(255, 255, 255, .72);
+  color: #4b7184;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.light-hero-actions svg {
+  width: 13px;
+  height: 13px;
+}
+
+.light-hero-photo {
+  min-width: 0;
+  margin-left: -22px;
+  background-image: linear-gradient(90deg, rgba(234, 245, 255, .7), rgba(234, 245, 255, 0) 38%), url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=700&q=86");
+  background-size: cover;
+  background-position: 54% center;
+  clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+  position: relative;
+}
+
+.light-hero-photo span {
+  position: absolute;
+  right: 7px;
+  bottom: 8px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, .92);
+  color: #d77b27;
+  font-size: 7px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  box-shadow: 0 4px 12px rgba(31, 58, 75, .12);
+}
+
+.light-hero-photo span svg {
+  width: 11px;
+  height: 11px;
+}
+
+.light-trust {
+  margin-top: 12px;
+  padding: 13px 19px;
+  border-top: 1px solid #eef2f4;
+  border-bottom: 1px solid #eef2f4;
+  background: #fff;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.light-trust span {
+  color: #687c88;
+  font-size: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.light-trust span + span {
+  border-left: 1px solid #edf1f3;
+}
+
+.light-trust svg {
+  width: 14px;
+  height: 14px;
+}
+
+.light-trust span:nth-child(1) svg { color: #1b75db; }
+.light-trust span:nth-child(2) svg { color: #ee8a3b; }
+.light-trust span:nth-child(3) svg { color: #1a9b70; }
+
+.light-section {
+  margin-top: 10px;
+  padding: 21px 16px;
+  background: #fff;
+}
+
+.light-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 19px;
+}
+
+.light-title strong,
+.light-title small {
+  display: block;
+}
+
+.light-title strong {
+  color: #1b303e;
+  font-size: 15px;
+}
+
+.light-title small {
+  margin-top: 5px;
+  color: #98a5ad;
+  font-size: 8px;
+}
+
+.light-title > button {
+  padding: 5px 0 5px 6px;
+  background: transparent;
+  color: #81919b;
+  font-size: 8px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.light-title > button svg {
+  width: 13px;
+  height: 13px;
+}
+
+.light-service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px 7px;
+}
+
+.light-service-grid button {
+  min-width: 0;
+  padding: 0;
+  background: transparent;
+  color: #2a3d49;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+}
+
+.light-service-grid button > span {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+}
+
+.light-service-grid svg {
+  width: 21px;
+  height: 21px;
+}
+
+.light-service-grid b,
+.light-service-grid small {
+  display: block;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.light-service-grid b {
+  font-size: 9px;
+  line-height: 1.35;
+}
+
+.light-service-grid small {
+  margin-top: 4px;
+  color: #9aa6ad;
+  font-size: 7px;
+}
+
+.tone-blue > span { background: #e9f3ff; color: #1972d7; }
+.tone-mint > span { background: #e8f8f1; color: #168d65; }
+.tone-orange > span { background: #fff1e5; color: #e4772c; }
+.tone-violet > span { background: #f0edff; color: #725bd4; }
+.tone-cyan > span { background: #e5f8fa; color: #168d9d; }
+.tone-rose > span { background: #ffedf0; color: #d95d74; }
+.tone-yellow > span { background: #fff6d9; color: #c58a1a; }
+.tone-slate > span { background: #eef2f4; color: #607583; }
+
+.light-benefits {
+  margin: 10px 14px 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.light-benefits button {
+  min-width: 0;
+  min-height: 105px;
+  padding: 15px 13px;
+  border-radius: 8px;
+  color: #24404f;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-align: left;
+  overflow: hidden;
+  position: relative;
+}
+
+.benefit-coupon { background: #fff2e6; }
+.benefit-worker { background: #e8f7f3; }
+
+.light-benefits span {
+  position: relative;
+  z-index: 2;
+}
+
+.light-benefits small,
+.light-benefits b,
+.light-benefits em {
+  display: block;
+}
+
+.light-benefits small {
+  color: #84919a;
+  font-size: 8px;
+}
+
+.light-benefits b {
+  margin-top: 8px;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.light-benefits em {
+  width: max-content;
+  margin-top: 10px;
+  padding: 4px 7px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .8);
+  font-size: 7px;
+  font-style: normal;
+}
+
+.light-benefits > button > svg {
+  width: 35px;
+  height: 35px;
+  flex: 0 0 35px;
+  margin: 4px -3px 0 5px;
+  opacity: .76;
+}
+
+.benefit-coupon > svg { color: #e9883f; }
+.benefit-worker > svg { color: #1c9b76; }
+
+.light-order-card {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #e8eef1;
+  border-radius: 8px;
+  background: #f8fafb;
+  color: #243a48;
+  text-align: left;
+}
+
+.light-order-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.light-order-main > span {
+  width: 39px;
+  height: 39px;
+  border-radius: 8px;
+  background: #e9f3ff;
+  color: #176fd4;
+  display: grid;
+  place-items: center;
+  flex: 0 0 39px;
+}
+
+.light-order-main > span svg {
+  width: 18px;
+  height: 18px;
+}
+
+.light-order-main > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.light-order-main b,
+.light-order-main small {
+  display: block;
+}
+
+.light-order-main b {
+  font-size: 10px;
+}
+
+.light-order-main small {
+  margin-top: 5px;
+  color: #87969f;
+  font-size: 8px;
+}
+
+.light-order-main em {
+  padding: 5px 7px;
+  border-radius: 10px;
+  background: #e8f8f1;
+  color: #13875e;
+  font-size: 7px;
+  font-style: normal;
+  white-space: nowrap;
+}
+
+.light-progress {
+  margin: 17px 10px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+}
+
+.light-progress::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  right: 7px;
+  top: 3px;
+  height: 2px;
+  background: linear-gradient(90deg, #2080df 0 67%, #dfe6ea 67% 100%);
+}
+
+.light-progress i {
+  width: 8px;
+  height: 8px;
+  border: 2px solid #2580dc;
+  border-radius: 50%;
+  background: #2580dc;
+  justify-self: center;
+  position: relative;
+  z-index: 1;
+}
+
+.light-progress i:last-child {
+  border-color: #dfe6ea;
+  background: #fff;
+}
+
+.light-progress i.active {
+  box-shadow: 0 0 0 4px #dfeeff;
+}
+
+.light-progress-label {
+  margin-top: 7px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.light-progress-label span {
+  color: #8b99a2;
+  font-size: 7px;
+  text-align: center;
+}
+
+.light-progress-label span:nth-child(3) {
+  color: #1874d4;
+  font-weight: 700;
+}
+
+.light-worker-list {
+  border-top: 1px solid #edf1f3;
+}
+
+.light-worker-list > button {
+  width: 100%;
+  min-height: 72px;
+  padding: 13px 2px;
+  border-bottom: 1px solid #edf1f3;
+  background: transparent;
+  color: #263a46;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-align: left;
+}
+
+.light-worker-list .avatar {
+  width: 43px;
+  height: 43px;
+  flex: 0 0 43px;
+  font-size: 12px;
+}
+
+.avatar-blue {
+  background: #e6f1ff;
+  color: #176dcc;
+}
+
+.avatar-mint {
+  background: #e5f7f0;
+  color: #168864;
+}
+
+.light-worker-list > button > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.light-worker-list b,
+.light-worker-list small {
+  display: block;
+}
+
+.light-worker-list b {
+  font-size: 10px;
+}
+
+.light-worker-list b em {
+  margin-left: 4px;
+  color: #e58a32;
+  font-size: 8px;
+  font-style: normal;
+}
+
+.light-worker-list small {
+  margin-top: 6px;
+  color: #85949d;
+  font-size: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.light-worker-list > button > svg {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 15px;
+  color: #a0acb3;
+}
+
+@media (max-width: 360px) {
+  .light-hero {
+    grid-template-columns: 1.48fr .52fr;
+  }
+
+  .light-hero-copy {
+    padding-left: 15px;
+  }
+
+  .light-hero h1 {
+    font-size: 19px;
+  }
+
+  .light-service-grid button > span {
+    width: 44px;
+    height: 44px;
+  }
+
+  .light-benefits button {
+    padding: 14px 10px;
+  }
+
+  .light-benefits > button > svg {
+    width: 28px;
+    height: 28px;
+    flex-basis: 28px;
+  }
+}
+
+</style>
+</head><body class="phone-page"><a class="back" href="index.html#features"><i data-lucide="arrow-left"></i>返回案例</a><main class="device"><div class="scroll">
+<section class="view active home-light" id="u-home">
+  <header class="light-head">
+    <div class="light-top">
+      <div class="light-brand">
+        <span class="brand-mark" aria-hidden="true"><i data-lucide="house"></i></span>
+        <div>
+          <strong>邻家帮</strong>
+          <button class="place plain" data-go="u-location"><i data-lucide="map-pin"></i>杭州西湖区<i data-lucide="chevron-down"></i></button>
+        </div>
+      </div>
+      <div class="actions light-tools">
+        <button data-go="u-service" aria-label="在线客服"><i data-lucide="headphones"></i></button>
+        <button data-go="u-messages" aria-label="消息中心"><i data-lucide="bell"></i><b class="badge">2</b></button>
+      </div>
+    </div>
+    <button class="light-search" data-go="u-services"><i data-lucide="search"></i><span>搜索保洁、清洗、维修等服务</span><i data-lucide="sliders-horizontal"></i></button>
+  </header>
+
+  <section class="light-hero">
+    <div class="light-hero-copy">
+      <small><i data-lucide="navigation"></i>品质家政 · 就近派单</small>
+      <h1>让家务更轻松</h1>
+      <p>最快30分钟接单，全程平台保障</p>
+      <div class="light-hero-actions">
+        <button data-go="u-booking">立即预约</button>
+        <button data-go="u-coupon"><i data-lucide="ticket-percent"></i>新人减30元</button>
+      </div>
+    </div>
+    <div class="light-hero-photo" aria-hidden="true"><span><i data-lucide="star"></i>4.9分好评</span></div>
+  </section>
+
+  <div class="light-trust">
+    <span><i data-lucide="badge-check"></i>实名认证</span>
+    <span><i data-lucide="wallet-cards"></i>资金托管</span>
+    <span><i data-lucide="shield-check"></i>售后保障</span>
+  </div>
+
+  <section class="light-section light-services">
+    <div class="light-title"><div><strong>热门服务</strong><small>品质生活，一键预约</small></div><button data-go="u-services">全部服务<i data-lucide="chevron-right"></i></button></div>
+    <div class="light-service-grid">
+      <button class="tone-blue" data-service="日常保洁"><span><i data-lucide="sparkles"></i></span><b>日常保洁</b><small>¥45/时起</small></button>
+      <button class="tone-mint" data-service="深度清洁"><span><i data-lucide="house"></i></span><b>深度清洁</b><small>¥199起</small></button>
+      <button class="tone-orange" data-service="家电清洗"><span><i data-lucide="air-vent"></i></span><b>家电清洗</b><small>¥89起</small></button>
+      <button class="tone-violet" data-service="维修安装"><span><i data-lucide="wrench"></i></span><b>维修安装</b><small>¥60起</small></button>
+      <button class="tone-cyan" data-service="搬家服务"><span><i data-lucide="truck"></i></span><b>搬家服务</b><small>¥168起</small></button>
+      <button class="tone-rose" data-service="同城跑腿"><span><i data-lucide="bike"></i></span><b>同城跑腿</b><small>¥20起</small></button>
+      <button class="tone-yellow" data-service="月嫂保姆"><span><i data-lucide="baby"></i></span><b>月嫂保姆</b><small>甄选阿姨</small></button>
+      <button class="tone-slate" data-go="u-services"><span><i data-lucide="layout-grid"></i></span><b>全部服务</b><small>更多分类</small></button>
+    </div>
+  </section>
+
+  <section class="light-benefits">
+    <button class="benefit-coupon" data-go="u-coupon"><span><small>新客专享</small><b>首单最高减 ¥30</b><em>立即领取</em></span><i data-lucide="ticket-percent"></i></button>
+    <button class="benefit-worker" data-go="u-workers"><span><small>附近师傅</small><b>1,268 名已认证</b><em>智能匹配</em></span><i data-lucide="users-round"></i></button>
+  </section>
+
+  <section class="light-section light-order">
+    <div class="light-title"><div><strong>当前服务</strong><small>订单进度实时更新</small></div><button data-go="u-orders">全部订单<i data-lucide="chevron-right"></i></button></div>
+    <button class="light-order-card" data-go="u-order-detail">
+      <div class="light-order-main"><span><i data-lucide="brush"></i></span><div><b>深度保洁 · 服务中</b><small>周师傅正在为您服务</small></div><em>约36分钟</em></div>
+      <div class="light-progress"><i></i><i></i><i class="active"></i><i></i></div>
+      <div class="light-progress-label"><span>已预约</span><span>已接单</span><span>服务中</span><span>待评价</span></div>
+    </button>
+  </section>
+
+  <section class="light-section light-workers">
+    <div class="light-title"><div><strong>优选师傅</strong><small>平台审核，口碑优先</small></div><button data-go="u-workers">查看更多<i data-lucide="chevron-right"></i></button></div>
+    <div class="light-worker-list">
+      <button data-worker="周师傅"><span class="avatar avatar-blue">周</span><div><b>周师傅 <em>4.9分</em></b><small>高级保洁师 · 1.2km · 今日可约</small></div><i data-lucide="chevron-right"></i></button>
+      <button data-worker="王师傅"><span class="avatar avatar-mint">王</span><div><b>王师傅 <em>4.8分</em></b><small>家电清洗 · 2.1km · 15:30可约</small></div><i data-lucide="chevron-right"></i></button>
+    </div>
+  </section>
+</section>
+<section class="view root-view orders-page" id="u-orders"><header class="page-head orders-head"><h2>我的订单</h2><button data-toast="订单搜索已打开"><i data-lucide="search"></i></button></header><div class="orders-content"><section class="order-overview"><div><small>近30天服务概览</small><strong>3 <em>单</em></strong><span>已节省人工派单沟通约 42 分钟</span></div><button data-go="u-service"><i data-lucide="headphones"></i><span>服务管家<small>售后/改期快速处理</small></span><i data-lucide="chevron-right"></i></button></section><section class="order-state-grid filters"><button class="active"><i data-lucide="list"></i><span>全部</span><b>3</b></button><button><i data-lucide="clock-3"></i><span>待接单</span></button><button><i data-lucide="calendar-check"></i><span>待服务</span><b>1</b></button><button><i data-lucide="sparkles"></i><span>服务中</span><b>1</b></button><button><i data-lucide="star"></i><span>待评价</span></button></section><div class="order-tabs filters"><button class="active">全部订单</button><button>进行中</button><button>已完成</button><button>退款售后</button></div><section class="order-list"><article class="order-card primary-order"><div class="order-card-head"><span>订单号 LJ20260715001</span><b class="status-pill running">服务中</b></div><div class="order-main"><i data-lucide="brush"></i><div><b>深度保洁 · 三小时标准服务</b><p>厨房重油污、卫生间死角、全屋除尘</p></div></div><div class="order-meta"><p><i data-lucide="clock"></i>今天 14:00–17:00</p><p><i data-lucide="map-pin"></i>西湖区文三路188号 A座1206</p></div><div class="order-worker"><span class="avatar">周</span><div><b>周师傅正在服务</b><small>距离完成约 36 分钟 · 好评率99.6%</small></div><button data-toast="正在呼叫周师傅"><i data-lucide="phone"></i></button></div><div class="order-progress"><span class="done">预约</span><span class="done">接单</span><span class="active">上门服务</span><span>评价</span></div><div class="order-card-foot"><strong>¥268.00</strong><div><button data-go="u-service">在线客服</button><button class="primary-action" data-go="u-order-detail">查看详情</button></div></div></article><article class="order-card"><div class="order-card-head"><span>订单号 LJ20260716008</span><b class="status-pill waiting">待服务</b></div><div class="order-main"><i data-lucide="air-vent"></i><div><b>家电清洗 · 空调深洗</b><p>挂机空调拆洗、除菌、排水检查</p></div></div><div class="order-meta"><p><i data-lucide="clock"></i>明天 09:00–10:30</p><p><i data-lucide="map-pin"></i>拱墅区湖墅南路66号</p></div><div class="order-card-foot"><strong>¥128.00</strong><div><button data-toast="改期入口已打开">改期</button><button class="primary-action" data-go="u-order-detail">查看详情</button></div></div></article><article class="order-card muted-order"><div class="order-card-head"><span>订单号 LJ20260712018</span><b class="status-pill done">已完成</b></div><div class="order-main"><i data-lucide="sparkles"></i><div><b>日常保洁 · 两小时上门</b><p>客厅、卧室、厨房基础清洁</p></div></div><div class="order-meta"><p><i data-lucide="clock"></i>7月12日 10:00–12:00</p><p><i data-lucide="map-pin"></i>西湖区文三路188号</p></div><div class="order-card-foot"><strong>¥90.00</strong><div><button data-toast="发票申请入口已打开">开发票</button><button class="primary-action" data-toast="评价入口已打开">去评价</button></div></div></article></section></div></section>
+<section class="view root-view" id="u-coupon"><header class="page-head coupon-head"><h2>优惠福利</h2><button data-toast="下单时系统会自动选择最优优惠"><i data-lucide="circle-help"></i></button></header><div class="coupon-overview"><div><small>我的优惠资产</small><strong>2 <em>张可用</em></strong></div><button data-claim><i data-lucide="gift"></i><span>兑换优惠码<small>输入兑换码领取</small></span><i data-lucide="chevron-right"></i></button></div><div class="coupon-tabs filters"><button class="active">可使用 2</button><button>已使用</button><button>已过期</button></div><div class="coupon-list"><article class="voucher"><div class="voucher-value"><strong><small>¥</small>30</strong><span>满199元可用</span></div><div class="voucher-info"><b>深度保洁专享券</b><p>适用于深度清洁服务</p><small>有效期至 2026.07.22</small></div><button data-service="深度清洁">去使用</button></article><article class="voucher orange"><div class="voucher-value"><strong>9<small>折</small></strong><span>最高减50元</span></div><div class="voucher-info"><b>家电清洗限时券</b><p>空调、油烟机、洗衣机可用</p><small>有效期至 2026.07.18</small></div><button data-service="家电清洗">去使用</button></article><div class="coupon-tip"><i data-lucide="shield-check"></i><span><b>平台优惠保障</b><small>下单自动计算最优优惠组合</small></span></div></div></section>
+<section class="view root-view me-page" id="u-me"><header class="me-head"><div class="me-tools"><button data-go="u-messages"><i data-lucide="bell"></i><b class="badge">2</b></button><button data-go="u-settings"><i data-lucide="settings"></i></button></div><button class="me-profile" data-go="u-profile"><span class="avatar">涛</span><span><b>微信用户</b><small><i data-lucide="badge-check"></i> 手机号已认证</small></span><i data-lucide="chevron-right"></i></button><div class="member-card"><div><small>邻家帮会员</small><b>品质生活，从每一次服务开始</b></div><button data-toast="会员权益页面已打开">查看权益</button></div></header><div class="me-content"><section class="me-panel order-panel"><div class="panel-title"><b>我的订单</b><button data-go="u-orders">全部订单 <i data-lucide="chevron-right"></i></button></div><div class="order-shortcuts"><button data-go="u-orders"><i data-lucide="clock-3"></i><span>待接单</span></button><button data-go="u-orders"><i data-lucide="calendar-check"></i><span>待服务</span><b>1</b></button><button data-go="u-orders"><i data-lucide="sparkles"></i><span>服务中</span><b>1</b></button><button data-toast="暂无待评价订单"><i data-lucide="star"></i><span>待评价</span></button><button data-toast="暂无售后订单"><i data-lucide="life-buoy"></i><span>售后</span></button></div></section><section class="asset-row"><button data-go="u-coupon"><strong>2</strong><span>优惠券</span></button><button data-toast="积分商城即将开放"><strong>680</strong><span>积分</span></button><button data-toast="账户余额为 ¥0.00"><strong>¥0</strong><span>余额</span></button></section><section class="me-panel"><div class="panel-title"><b>常用服务</b></div><div class="tool-grid"><button data-go="u-address"><i data-lucide="map-pinned"></i><span>服务地址</span></button><button data-go="u-workers"><i data-lucide="heart-handshake"></i><span>常用师傅</span></button><button data-go="u-service"><i data-lucide="headphones"></i><span>在线客服</span></button><button data-go="u-service"><i data-lucide="circle-help"></i><span>帮助中心</span></button><button data-toast="邀请海报已生成"><i data-lucide="user-round-plus"></i><span>邀请有礼</span></button><button data-go="u-settings"><i data-lucide="shield-check"></i><span>隐私设置</span></button><button data-toast="发票管理页面已打开"><i data-lucide="receipt-text"></i><span>发票管理</span></button><button data-toast="意见反馈入口已打开"><i data-lucide="message-square-more"></i><span>意见反馈</span></button></div></section><p class="service-number">客服电话 400-888-6688 · 服务时间 08:00–22:00</p></div></section>
+<section class="view detail" id="u-services"><header class="page-head"><button data-back><i data-lucide="chevron-left"></i></button><h2>全部服务</h2><span></span></header><div class="section flush"><div class="searchbox"><i data-lucide="search"></i>搜索您需要的服务</div><div class="service-list"><button data-service="日常保洁"><i data-lucide="sparkles"></i><span><b>日常保洁</b><small>钟点清洁 · 全屋除尘</small></span><em>¥45/小时起</em></button><button data-service="深度清洁"><i data-lucide="house"></i><span><b>深度清洁</b><small>厨房卫生间 · 死角清洁</small></span><em>¥199起</em></button><button data-service="家电清洗"><i data-lucide="air-vent"></i><span><b>家电清洗</b><small>空调 · 油烟机 · 洗衣机</small></span><em>¥89起</em></button><button data-service="维修安装"><i data-lucide="wrench"></i><span><b>维修安装</b><small>水电 · 灯具 · 家具</small></span><em>¥60起</em></button><button data-service="搬家服务"><i data-lucide="truck"></i><span><b>搬家服务</b><small>小型搬家 · 企业搬迁</small></span><em>¥168起</em></button><button data-service="同城跑腿"><i data-lucide="bike"></i><span><b>同城跑腿</b><small>代买 · 代送 · 代办</small></span><em>¥20起</em></button></div></div></section>
+<section class="view detail" id="u-service-detail"><header class="page-head overlay"><button data-back><i data-lucide="chevron-left"></i></button><h2>服务详情</h2><button data-toast="已收藏该服务"><i data-lucide="heart"></i></button></header><div class="detail-cover"><i data-lucide="sparkles"></i><small>专业标准化服务</small></div><div class="section flush service-copy"><div class="price"><div><h2 id="service-name">日常保洁</h2><span>已服务12,680次 · 好评99.2%</span></div><strong>¥45<small>/小时起</small></strong></div><h3>服务内容</h3><div class="promise"><span><i data-lucide="badge-check"></i>实名认证</span><span><i data-lucide="shield-check"></i>平台保障</span><span><i data-lucide="clock-3"></i>准时上门</span></div><p>提供客厅、卧室、厨房、卫生间等区域的标准化清洁服务。下单后系统将自动匹配附近可服务师傅。</p></div><div class="sticky-action"><button data-go="u-service">咨询客服</button><button class="primary-action" data-go="u-booking">立即预约</button></div></section>
+<section class="view detail" id="u-booking"><header class="page-head"><button data-back><i data-lucide="chevron-left"></i></button><h2>预约服务</h2><span></span></header><div class="form-page"><label>服务项目<button data-go="u-services"><b class="booking-service">日常保洁</b><span>更换 ></span></button></label><label>预约时间<button data-sheet="选择预约时间"><b class="booking-time">今天 14:00</b><span>选择 ></span></button></label><label>服务地址<button data-go="u-address"><b class="booking-address">文三路188号</b><span>更换 ></span></button></label><label>问题图片<button data-toast="图片上传入口已打开"><b>+ 上传现场图片</b><span>最多6张</span></button></label><label>服务备注<textarea placeholder="请输入特殊需求，如宠物、停车方式等"></textarea></label><div class="pay-box"><span>预估费用</span><strong>¥180.00</strong></div><button class="submit-booking">提交预约并支付</button></div></section>
+<section class="view detail" id="u-order-detail"><header class="page-head"><button data-back><i data-lucide="chevron-left"></i></button><h2>订单详情</h2><button data-toast="售后申请入口已打开">售后</button></header><div class="order-status"><i data-lucide="sparkles"></i><div><b>师傅正在服务中</b><small>预计今天17:00完成</small></div></div><div class="section flush"><div class="timeline"><span class="done">预约成功<small>13:22</small></span><span class="done">师傅接单<small>13:25</small></span><span class="active">服务中<small>14:03</small></span><span>待评价</span></div><div class="info-list"><p><span>服务项目</span><b>深度保洁</b></p><p><span>服务师傅</span><b>周师傅 · 4.9分</b></p><p><span>服务时间</span><b>今天14:00–17:00</b></p><p><span>服务地址</span><b>西湖区文三路188号</b></p><p><span>实付金额</span><b>¥268.00</b></p></div></div><div class="sticky-action"><button data-go="u-service">在线客服</button><button class="primary-action" data-toast="正在呼叫周师傅">电话联系</button></div></section>
+<section class="view detail" id="u-worker"><header class="page-head"><button data-back><i data-lucide="chevron-left"></i></button><h2>师傅详情</h2><button data-toast="已关注该师傅"><i data-lucide="heart"></i></button></header><div class="worker-profile"><span class="avatar large">周</span><h2 id="worker-name">周师傅</h2><p>实名认证 · 高级保洁师 · 从业8年</p><div><b>1268<small>服务订单</small></b><b>99.6%<small>好评率</small></b><b>4.9<small>综合评分</small></b></div></div><div class="section flush"><h3>资质证书</h3><div class="certs"><span><i data-lucide="badge-check"></i>实名认证</span><span><i data-lucide="award"></i>技能认证</span><span><i data-lucide="shield-check"></i>健康证明</span></div><h3>近期评价</h3><p class="review">“非常细致，厨房和卫生间都清理得很干净，准时到达。”<small>陈女士 · 7月12日</small></p></div><div class="sticky-action"><button data-toast="正在呼叫师傅">电话联系</button><button class="primary-action" data-go="u-booking">预约该师傅</button></div></section>
+<section class="view detail" id="u-location"><header class="page-head"><button data-back><i data-lucide="chevron-left"></i></button><h2>选择服务城市</h2><span></span></header><div class="section flush"><button class="locate-now" data-toast="定位成功：杭州市西湖区"><i data-lucide="locate-fixed"></i><span><b>当前定位</b><small>杭州市 · 西湖区</small></span></button><h3>已开通城市</h3><div class="city-grid"><button data-city>杭州</button><button data-city>上海</button><button data-city>宁波</button><button data-city>南京</button><button data-city>苏州</button><button data-city>合肥</button></div></div></section>
+<section class="view detail" id="u-address"><header class="page-head"><button data-back><i data-lucide="chevron-left"></i></button><h2>服务地址</h2><button data-toast="新增地址表单已打开"><i data-lucide="plus"></i></button></header><div class="section flush"><button class="address-card" data-address><b>涛总 138****6688</b><span>杭州市西湖区文三路188号 A座1206</span><em>默认</em></button><button class="address-card" data-address><b>张女士 136****2819</b><span>杭州市拱墅区湖墅南路66号</span></button></div></section>
+<section class="view detail" id="u-workers"><header class="page-head"><button data-back><i data-lucide="chevron-left"></i></button><h2>附近师傅</h2><button data-toast="已按距离由近到远排序"><i data-lucide="arrow-down-up"></i></button></header><div class="section flush"><button class="master master-btn" data-worker="周师傅"><span class="avatar">周</span><div><b>周师傅 · 高级保洁师</b><small>好评99.6% · 1.2km · 今日可约</small></div><em>查看</em></button><button class="master master-btn" data-worker="王师傅"><span class="avatar">王</span><div><b>王师傅 · 家电清洗</b><small>好评98.9% · 2.1km · 15:30可约</small></div><em>查看</em></button><button class="master master-btn" data-worker="赵师傅"><span class="avatar">赵</span><div><b>赵师傅 · 维修安装</b><small>好评99.1% · 2.8km · 明日可约</small></div><em>查看</em></button></div></section>
+<section class="view detail" id="u-service"><header class="page-head"><button data-back><i data-lucide="chevron-left"></i></button><h2>客服与帮助</h2><span></span></header><div class="service-center"><i data-lucide="headphones"></i><h2>邻家帮在线客服</h2><p>服务时间 08:00–22:00</p><button data-toast="在线客服会话已建立">联系在线客服</button><button data-toast="客服热线：400-888-6688">拨打客服电话</button></div><div class="section"><h3>常见问题</h3><div class="menu-list"><button data-toast="预约成功后可在订单详情申请改期">如何修改预约时间？<span>></span></button><button data-toast="取消规则根据服务开始时间计算">取消订单如何退款？<span>></span></button><button data-toast="服务完成后可在订单中心提交评价">如何评价师傅？<span>></span></button></div></div></section>
+<section class="view detail" id="u-messages"><header class="page-head"><button data-back><i data-lucide="chevron-left"></i></button><h2>消息中心</h2><button data-toast="全部消息已标记为已读">全部已读</button></header><div class="section flush"><div class="message"><i data-lucide="clipboard-check"></i><div><b>师傅已接单</b><p>周师傅已接受您的深度保洁订单</p><small>今天13:25</small></div></div><div class="message"><i data-lucide="ticket-percent"></i><div><b>新人优惠券到账</b><p>¥20首单券已放入您的账户</p><small>昨天18:10</small></div></div></div></section>
+<section class="view detail" id="u-profile"><header class="page-head"><button data-back><i data-lucide="chevron-left"></i></button><h2>编辑资料</h2><button data-toast="个人资料已保存">保存</button></header><div class="form-page"><label>头像<button data-toast="头像选择入口已打开"><span class="avatar">涛</span><span>更换 ></span></button></label><label>昵称<input value="微信用户"></label><label>手机号<input value="138****6688" disabled></label></div></section>
+<section class="view detail" id="u-settings"><header class="page-head"><button data-back><i data-lucide="chevron-left"></i></button><h2>隐私与设置</h2><span></span></header><div class="section flush"><div class="menu-list"><button data-toast="消息通知设置已更新">消息通知<span>已开启 ></span></button><button data-toast="隐私政策页面已打开">隐私政策<span>></span></button><button data-toast="当前已是最新版本">检查更新<span>v1.0.0</span></button><button data-toast="缓存已清理">清理缓存<span>12.8MB</span></button></div></div></section>
+</div><nav class="nav"><button class="active" data-nav="u-home"><i data-lucide="house"></i><span>首页</span></button><button data-nav="u-orders"><i data-lucide="clipboard-list"></i><span>订单</span></button><button data-nav="u-coupon"><i data-lucide="ticket-percent"></i><span>优惠</span></button><button data-nav="u-me"><i data-lucide="user-round"></i><span>我的</span></button></nav><div class="toast user-toast"></div><div class="sheet"><div><b class="sheet-title">选择预约时间</b><button data-time="今天 14:00">今天14:00</button><button data-time="今天 16:00">今天16:00</button><button data-time="明天 09:00">明天09:00</button><button data-sheet-close>取消</button></div></div></main><script defer src="lucide.min.js"></script><script>
+document.addEventListener('DOMContentLoaded', () => {
+  const reviewIcon = document.querySelector('[data-lucide="message-square-star"]');
+  if (reviewIcon) reviewIcon.setAttribute('data-lucide', 'star');
+  ['u-orders', 'u-coupon'].forEach((id) => {
+    const header = document.querySelector(`#${id} .page-head`);
+    const spacer = document.createElement('span');
+    spacer.setAttribute('aria-hidden', 'true');
+    header.insertBefore(spacer, header.firstChild);
+  });
+  if (window.lucide) window.lucide.createIcons();
+  const device = document.querySelector('.device');
+  const scroll = document.querySelector('.scroll');
+  const views = [...device.querySelectorAll('.view')];
+  const nav = device.querySelector('.nav');
+  const toast = device.querySelector('.user-toast');
+  const history = [];
+  const roots = ['u-home', 'u-orders', 'u-coupon', 'u-me'];
+  const serviceBanners = {
+    '日常保洁': { image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=88', label: '日常保洁 · 准时上门', price: '¥45', unit: '/小时起' },
+    '深度清洁': { image: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1200&q=88', label: '深度清洁 · 全屋焕新', price: '¥199', unit: '起' },
+    '家电清洗': { image: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1200&q=88', label: '家电清洗 · 专业拆洗', price: '¥89', unit: '起' },
+    '维修安装': { image: 'https://images.unsplash.com/photo-1581783898377-1c85bf937427?auto=format&fit=crop&w=1200&q=88', label: '维修安装 · 快速响应', price: '¥60', unit: '起' },
+    '搬家服务': { image: 'https://images.unsplash.com/photo-1600518464441-9154a4dea21b?auto=format&fit=crop&w=1200&q=88', label: '搬家服务 · 全程守护', price: '¥168', unit: '起' },
+    '同城跑腿': { image: 'https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=1200&q=88', label: '同城跑腿 · 即时送达', price: '¥20', unit: '起' },
+    '月嫂保姆': { image: 'https://images.unsplash.com/photo-1544776193-352d25ca82cd?auto=format&fit=crop&w=1200&q=88', label: '月嫂保姆 · 安心陪护', price: '¥6800', unit: '/月起' }
+  };
+
+  const show = (id, push = true) => {
+    const current = views.find((view) => view.classList.contains('active'));
+    if (push && current && current.id !== id) history.push(current.id);
+    views.forEach((view) => view.classList.toggle('active', view.id === id));
+    nav.classList.toggle('is-hidden', !roots.includes(id));
+    if (roots.includes(id)) {
+      nav.querySelectorAll('[data-nav]').forEach((button) => {
+        button.classList.toggle('active', button.dataset.nav === id);
+      });
+    }
+    scroll.scrollTop = 0;
+  };
+
+  const note = (message) => {
+    toast.textContent = message;
+    toast.classList.add('show');
+    clearTimeout(window.userToastTimer);
+    window.userToastTimer = setTimeout(() => toast.classList.remove('show'), 1600);
+  };
+
+  nav.querySelectorAll('[data-nav]').forEach((button) => {
+    button.addEventListener('click', () => {
+      history.length = 0;
+      show(button.dataset.nav, false);
+    });
+  });
+  device.querySelectorAll('.filters button').forEach((button) => {
+    button.addEventListener('click', () => {
+      button.parentElement.querySelectorAll('button').forEach((item) => item.classList.remove('active'));
+      button.classList.add('active');
+    });
+  });
+
+  device.querySelectorAll('[data-go]').forEach((button) => button.addEventListener('click', (event) => {
+    event.stopPropagation();
+    show(button.dataset.go);
+  }));
+  device.querySelectorAll('[data-back]').forEach((button) => button.addEventListener('click', () => show(history.pop() || 'u-home', false)));
+  device.querySelectorAll('[data-toast]').forEach((button) => button.addEventListener('click', () => note(button.dataset.toast)));
+  device.querySelectorAll('[data-service]').forEach((button) => button.addEventListener('click', () => {
+    const name = button.dataset.service;
+    const banner = serviceBanners[name] || serviceBanners['日常保洁'];
+    const cover = device.querySelector('.detail-cover');
+    device.querySelector('#service-name').textContent = name;
+    device.querySelector('.booking-service').textContent = name;
+    cover.style.backgroundImage = `linear-gradient(90deg, rgba(11, 35, 56, .78), rgba(11, 35, 56, .12)), url("${banner.image}")`;
+    cover.querySelector('small').textContent = banner.label;
+    device.querySelector('.price > strong').innerHTML = `${banner.price}<small>${banner.unit}</small>`;
+    show('u-service-detail');
+  }));
+  device.querySelectorAll('[data-worker]').forEach((button) => button.addEventListener('click', () => {
+    device.querySelector('#worker-name').textContent = button.dataset.worker;
+    show('u-worker');
+  }));
+  device.querySelectorAll('[data-claim]').forEach((button) => button.addEventListener('click', () => {
+    button.textContent = '已领取';
+    button.disabled = true;
+    note('优惠券已放入账户');
+  }));
+  device.querySelectorAll('[data-city]').forEach((button) => button.addEventListener('click', () => {
+    note(`已切换至${button.textContent}`);
+    setTimeout(() => show(history.pop() || 'u-home', false), 500);
+  }));
+  device.querySelectorAll('[data-address]').forEach((button) => button.addEventListener('click', () => {
+    device.querySelector('.booking-address').textContent = button.querySelector('span').textContent;
+    note('服务地址已选择');
+    setTimeout(() => show('u-booking'), 450);
+  }));
+
+  const sheet = device.querySelector('.sheet');
+  device.querySelectorAll('[data-sheet]').forEach((button) => button.addEventListener('click', () => sheet.classList.add('open')));
+  device.querySelector('[data-sheet-close]').addEventListener('click', () => sheet.classList.remove('open'));
+  device.querySelectorAll('[data-time]').forEach((button) => button.addEventListener('click', () => {
+    device.querySelector('.booking-time').textContent = button.dataset.time;
+    sheet.classList.remove('open');
+    note('预约时间已更新');
+  }));
+  device.querySelector('.submit-booking').addEventListener('click', () => {
+    note('支付成功，订单已提交');
+    setTimeout(() => {
+      history.length = 0;
+      show('u-orders', false);
+    }, 700);
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const initialView = window.location.hash.slice(1);
+  if (!initialView) return;
+  document.querySelector(`[data-nav="${initialView}"]`)?.click();
+});
+
+</script></body></html>
