@@ -447,6 +447,9 @@ function resetCasebookPosition() {
 
 resetCasebookPosition();
 window.addEventListener('pageshow', resetCasebookPosition);
+window.addEventListener('load', () => {
+  window.setTimeout(loadAllFrames, 500);
+}, { once: true });
 
 </script>
 </body>
