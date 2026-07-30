@@ -410,13 +410,15 @@ function syncActivePageFromScroll() {
   }
 }
 
+function loadVisiblePage() {
+  syncActivePageFromScroll();
+  loadPageAssets(visiblePage.dataset.casePage);
+}
+
 track.addEventListener('scroll', () => {
   if (!scrollFrame) scrollFrame = requestAnimationFrame(syncActivePageFromScroll);
   window.clearTimeout(scrollLoadTimer);
-  scrollLoadTimer = window.setTimeout(() => {
-    syncActivePageFromScroll();
-    loadPageAssets(visiblePage.dataset.casePage);
-  }, 160);
+  scrollLoadTimer = window.setTimeout(loadVisiblePage, 160);
 }, { passive: true });
 
 document.addEventListener('keydown', (event) => {
@@ -436,6 +438,10 @@ if (document.readyState === 'loading') {
 }
 
 setActivePage(1);
+window.addEventListener('pageshow', () => {
+  requestAnimationFrame(loadVisiblePage);
+  window.setTimeout(loadVisiblePage, 300);
+});
 
 </script>
 </body>
