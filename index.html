@@ -364,16 +364,18 @@ function loadAllFrames() {
 }
 
 function goToPage(page) {
+  const pageElement = document.querySelector(`[data-case-page="${page}"]`);
+  if (!pageElement) return;
+
   setActivePage(page);
-  document.querySelector(`[data-case-page="${page}"]`)?.scrollIntoView({
-    behavior: 'smooth',
-    inline: 'center',
-    block: 'nearest'
+  track.scrollTo({
+    left: pageElement.offsetLeft - pages[0].offsetLeft,
+    behavior: 'smooth'
   });
 }
 
-function setActivePage(page) {
-  loadPageAssets(page);
+function setActivePage(page, { loadAssets = true } = {}) {
+  if (loadAssets) loadPageAssets(page);
   pageButtons.forEach((button) => {
     button.classList.toggle('active', button.dataset.page === String(page));
   });
@@ -394,15 +396,13 @@ let scrollFrame = 0;
 
 function syncActivePageFromScroll() {
   scrollFrame = 0;
-  const trackRect = track.getBoundingClientRect();
-  const trackCenter = trackRect.left + trackRect.width / 2;
+  const firstPageOffset = pages[0].offsetLeft;
   const activePage = pages.reduce((closest, page) => {
-    const pageRect = page.getBoundingClientRect();
-    const distance = Math.abs(pageRect.left + pageRect.width / 2 - trackCenter);
+    const distance = Math.abs(page.offsetLeft - firstPageOffset - track.scrollLeft);
     return !closest || distance < closest.distance ? { page, distance } : closest;
   }, null)?.page;
 
-  if (activePage) setActivePage(activePage.dataset.casePage);
+  if (activePage) setActivePage(activePage.dataset.casePage, { loadAssets: false });
 }
 
 track.addEventListener('scroll', () => {
